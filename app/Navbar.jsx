@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Brand from '../public/assets/brand.svg';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 import styles from './navbar.module.css';
 
 export default function Navbar() {
@@ -40,7 +43,12 @@ export default function Navbar() {
                   href='https://github.com/dvbenson'
                   rel='noopener noreferrer'
                 >
-                  <button className={styles.button_circle}>G</button>
+                  <button className={styles.button_circle}>
+                    <FontAwesomeIcon
+                      icon={faGithubAlt}
+                      className={styles.icon}
+                    />
+                  </button>
                 </a>
               </li>
 
@@ -50,7 +58,12 @@ export default function Navbar() {
                   href='https://www.linkedin.com/in/danielvictorbenson/'
                   rel='noopener noreferrer'
                 >
-                  <button className={styles.button_circle}>L</button>
+                  <button className={styles.button_circle}>
+                    <FontAwesomeIcon
+                      icon={faLinkedinIn}
+                      className={styles.icon}
+                    />
+                  </button>
                 </a>
               </li>
 
