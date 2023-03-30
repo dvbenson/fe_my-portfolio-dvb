@@ -3,7 +3,7 @@ import './globals.css';
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>{children}</body>
+      <body className='bg-black'>{children}</body>
     </html>
   );
 }

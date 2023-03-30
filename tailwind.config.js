@@ -13,10 +13,9 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      'green': '#CCFF00',
+      'electric-lime': '#CCFF00',
       'pink': '#FFCCCC',
       'blue': '#669999',
-      'green': '#13ce66',
       'gray': '#CCCCCC',
       'gray-dark': '#9D9D9D',
       'black': '#000000',
