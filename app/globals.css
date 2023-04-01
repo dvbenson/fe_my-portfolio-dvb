@@ -6,7 +6,4 @@
   html {
     font-family: 'DM Serif Display';
   }
-  body {
-    @apply bg-black;
-  }
 }

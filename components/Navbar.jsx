@@ -1,21 +1,58 @@
+'use client';
 import Image from 'next/image';
 import Brand from '../public/assets/brand.svg';
 import Link from 'next/link';
+// import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
-import styles from './navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar({ styles, logo }) {
+  // const router = useRouter();
+  // const navLink = [
+  //   {
+  //     name: 'Home',
+  //     path: '/',
+  //   },
+  //   {
+  //     name: 'About',
+  //     path: '/about',
+  //   },
+  //   {
+  //     name: 'Projects',
+  //     path: '/projects',
+  //   },
+  //   {
+  //     name: 'Contact',
+  //     path: '/contact',
+  //   },
+  // ];
+
+  // console.log(useMyRouter.pathname);
   return (
     <>
-      <nav className='bg-electric-lime w-full h-24'>
+      <nav className={styles.nav}>
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
           <div className='ml-4'>
-            <Image src={Brand} alt='brand' />
+            {logo ? <Image src={Brand} alt='brand' /> : null}
           </div>
           <div>
             <ul className='flex'>
+              {/* {navLink.map(({ path, name }) => (
+                <li className='p-4' key={name}>
+                  <Link href={`${path}`}>
+                    <button
+                      className={` ${
+                        router.pathname === path
+                          ? styles.button_active
+                          : styles.button
+                      }`}
+                    >
+                      {name}
+                    </button>
+                  </Link>
+                </li>
+              ))} */}
               <li className='p-4'>
                 <Link href='/'>
                   <button className={styles.button}>Home</button>

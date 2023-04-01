@@ -1,3 +1,8 @@
+.nav {
+  background-color: #ccff00;
+  min-width: 100vw;
+  height: 96px;
+}
 .button {
   background-color: black;
   color: white;
@@ -42,7 +47,6 @@
   outline: none;
   margin: 6px 10px 2px 10px;
 }
-
 .icon {
   margin: auto;
 }

@@ -1,9 +1,9 @@
-import Navbar from './Navbar';
+import DefaultLayout from '../components/DefaultLayout';
+import styles from '../styles/home.module.css';
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <section className='ml-24 mt-72'>
+    <DefaultLayout styles={styles} logo={true}>
+      <main className={styles.main}>
         <p className='subpixel-antialiased text-8xl  text-electric-lime tracking-normal'>
           <span className='underline underline-offset-8'>Daniel Benson</span>
           <br />
@@ -14,7 +14,7 @@ export default function Home() {
           <span className='text-white'>.</span>
           <br />
         </p>
-      </section>
-    </>
+      </main>
+    </DefaultLayout>
   );
 }
