@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <DefaultLayout styles={styles} page={'home'}>
       <main className={styles.main}>
-        <p className='subpixel-antialiased text-8xl  text-electric-lime tracking-normal'>
+        <p className='subpixel-antialiased text-4xl md:text-8xl  text-electric-lime tracking-normal'>
           <span className='underline underline-offset-8'>Daniel Benson</span>
           <br />
           Software Developer

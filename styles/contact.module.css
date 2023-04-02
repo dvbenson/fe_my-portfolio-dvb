@@ -32,6 +32,30 @@
   margin: 6px 10px 2px 10px;
   font-weight: bold;
 }
+.button_sidenav {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: 0.125rem 0.125rem black, 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin: 4px 10px 4px 10px;
+  font-weight: bold;
+}
+.button_active_sidenav {
+  background-color: #ccff00;
+  color: rgba(144, 198, 0);
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: inset -0px -0px 5px rgba(0, 0, 0, 0.4);
+  margin: 6px 10px 2px 10px;
+  font-weight: bold;
+}
 .button:active {
   background-color: #ccff00;
   color: rgba(144, 198, 0);
@@ -49,6 +73,21 @@
   padding: 0px;
   font-size: 16px;
   box-shadow: 0.125rem 0.125rem black, 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin: 4px 10px 4px 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_circle_sidenav {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: 0.125rem 0.125rem #cccccc, 1px 1px 5px rgba(0, 0, 0, 0.4);
   margin: 4px 10px 4px 10px;
   font-weight: bold;
   display: flex;
