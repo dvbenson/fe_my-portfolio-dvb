@@ -1,76 +1,95 @@
 'use client';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
 import Image from 'next/image';
 import Brand from '../public/assets/brand.svg';
 import Link from 'next/link';
-// import { useRouter } from 'next/router';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
-export default function Navbar({ styles, logo }) {
-  // const router = useRouter();
-  // const navLink = [
-  //   {
-  //     name: 'Home',
-  //     path: '/',
-  //   },
-  //   {
-  //     name: 'About',
-  //     path: '/about',
-  //   },
-  //   {
-  //     name: 'Projects',
-  //     path: '/projects',
-  //   },
-  //   {
-  //     name: 'Contact',
-  //     path: '/contact',
-  //   },
-  // ];
+export default function Navbar({ styles, page }) {
+  const pathname = usePathname();
 
-  // console.log(useMyRouter.pathname);
+  const defaultClass = 'fixed w-full h-24 bg-electric-lime';
+  const projectClass = 'fixed w-full h-24 bg-blue';
+  const contactClass = 'fixed w-full h-24 bg-pink';
   return (
     <>
-      <nav className={styles.nav}>
+      <nav
+        className={
+          page === 'home' || page === 'about'
+            ? defaultClass
+            : page === 'projects'
+            ? projectClass
+            : contactClass
+        }
+      >
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
           <div className='ml-4'>
-            {logo ? <Image src={Brand} alt='brand' /> : null}
+            {page === 'home' ? (
+              <Image
+                src={Brand}
+                alt='brand'
+                width='205'
+                height='auto'
+                className='cursor-pointer'
+              />
+            ) : null}
           </div>
           <div>
-            <ul className='flex'>
-              {/* {navLink.map(({ path, name }) => (
-                <li className='p-4' key={name}>
-                  <Link href={`${path}`}>
-                    <button
-                      className={` ${
-                        router.pathname === path
-                          ? styles.button_active
-                          : styles.button
-                      }`}
-                    >
-                      {name}
-                    </button>
-                  </Link>
-                </li>
-              ))} */}
+            <ul className='hidden sm:flex'>
               <li className='p-4'>
                 <Link href='/'>
-                  <button className={styles.button}>Home</button>
+                  <button
+                    className={
+                      pathname === '/' ? styles.button_active : styles.button
+                    }
+                  >
+                    Home
+                  </button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='/about'>
-                  <button className={styles.button}>About</button>
+                  <button
+                    className={
+                      pathname === '/about'
+                        ? styles.button_active
+                        : styles.button
+                    }
+                  >
+                    About
+                  </button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='/projects'>
-                  <button className={styles.button}>Projects</button>
+                  <button
+                    className={
+                      pathname === '/projects'
+                        ? styles.button_active
+                        : styles.button
+                    }
+                  >
+                    Projects
+                  </button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='/contact'>
-                  <button className={styles.button}>Contact</button>
+                  <button
+                    className={
+                      pathname === '/contact'
+                        ? styles.button_active
+                        : styles.button
+                    }
+                  >
+                    Contact
+                  </button>
                 </Link>
               </li>
 
@@ -108,6 +127,9 @@ export default function Navbar({ styles, logo }) {
                 <button className={styles.button_circle}>T</button>
               </li>
             </ul>
+          </div>
+          <div className='md:hidden cursor-pointer pl-24'>
+            <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
       </nav>

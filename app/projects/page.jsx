@@ -3,7 +3,7 @@ import styles from '@/styles/projects.module.css';
 
 export default function page() {
   return (
-    <DefaultLayout styles={styles} logo={false}>
+    <DefaultLayout styles={styles} page={'projects'}>
       <main className={styles.main}>
         <h1 className='text-4xl font-bold'>Projects</h1>
       </main>

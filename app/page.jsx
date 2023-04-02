@@ -1,8 +1,9 @@
+// 'use client';
 import DefaultLayout from '../components/DefaultLayout';
 import styles from '../styles/home.module.css';
 export default function Home() {
   return (
-    <DefaultLayout styles={styles} logo={true}>
+    <DefaultLayout styles={styles} page={'home'}>
       <main className={styles.main}>
         <p className='subpixel-antialiased text-8xl  text-electric-lime tracking-normal'>
           <span className='underline underline-offset-8'>Daniel Benson</span>
