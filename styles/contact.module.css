@@ -1,8 +1,3 @@
-.main {
-  min-height: 100vh;
-  background-color: #ffcccc;
-}
-
 .nav {
   background-color: #ffcccc;
   min-width: 100vw;
@@ -104,4 +99,12 @@
 }
 .icon {
   margin: auto;
+}
+
+.divider {
+  box-shadow: 0.125rem 0.125rem black, 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin: 4px 10px 4px 10px;
+  background-color: #ccff00;
+  border-radius: 50px;
+  color: #ccff00;
 }
