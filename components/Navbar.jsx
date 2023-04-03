@@ -19,12 +19,6 @@ export default function Navbar({ styles, page }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // const homeClass = 'fixed w-full h-24 bg-electric-lime border-t-0 shadow-none';
-  // const aboutClass =
-  //   'fixed w-full h-24 bg-electric-lime border-t-0 shadow-none';
-  // const projectClass = 'fixed w-full h-24 bg-blue border-t-0 shadow-none';
-  // const contactClass = 'fixed w-full h-24 bg-pink border-t-0 shadow-none';
-
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };

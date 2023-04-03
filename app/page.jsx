@@ -1,7 +1,7 @@
 import DefaultLayout from '../components/DefaultLayout';
 import styles from '../styles/home.module.css';
 
-export default function Home({ initialData }) {
+export default function Home() {
   return (
     <DefaultLayout styles={styles} page={'home'}>
       <main className='min-h-screen bg-black pl-8 sm:pl-16 lg:pl-32 pt-48 md:pt-64'>
