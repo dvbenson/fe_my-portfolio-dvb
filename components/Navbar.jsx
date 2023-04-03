@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 import Image from 'next/image';
@@ -22,17 +22,19 @@ export default function Navbar({ styles, page }) {
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
     <>
       <nav
+        id='navbar'
         className={
           page === 'home'
             ? 'fixed w-full h-24 bg-electric-lime border-t-0 shadow-none'
             : page === 'about'
-            ? 'fixed w-full h-24 bg-electric-lime border-t-0 shadow-none'
+            ? 'w-full h-24 bg-electric-lime border-t-0 shadow-none'
             : page === 'projects'
-            ? 'fixed w-full h-24 bg-blue border-t-0 shadow-none'
-            : 'fixed w-full h-24 bg-pink border-t-0 shadow-none'
+            ? 'w-full h-24 bg-blue border-t-0 shadow-none'
+            : 'w-full h-24 bg-pink border-t-0 shadow-none'
         }
       >
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
