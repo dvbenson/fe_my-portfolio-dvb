@@ -109,13 +109,14 @@
 /* >>CONTENT<< */
 /* BANNER */
 .cv_button {
+  position: relative;
   background-color: #cccccc;
   color: black;
   border-radius: 50px;
-  height: 60px;
-  width: 60px;
+  height: 90px;
+  width: 90px;
   padding: 0px;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: 0.125rem 0.125rem #2c3333, 1px 1px 5px rgba(0, 0, 0, 0.4);
   margin: 4px 10px 4px 10px;
   display: flex;
@@ -128,4 +129,13 @@
   box-shadow: inset -0px -0px 5px rgba(0, 0, 0, 0.4);
   outline: none;
   margin: 6px 10px 2px 10px;
+}
+.emoji {
+  font-size: 52px;
+  rotate: -40deg;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: -10px;
+  transform: translateY(20%);
 }
