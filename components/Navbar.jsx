@@ -1,9 +1,7 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-import Image from 'next/image';
-import Brand from '../public/assets/brand.svg';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -39,19 +37,7 @@ export default function Navbar({ styles, page }) {
       >
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
           <div className='ml-4'>
-            {page === 'home' ? (
-              <Image
-                src={Brand}
-                alt='brand'
-                className='w-160 h-auto md:w-120 cursor-pointer'
-              />
-            ) : (
-              <Image
-                src={Brand}
-                alt='brand'
-                className=' hidden w-160 h-auto md:w-120 cursor-pointer'
-              />
-            )}
+            <p className='text-3xl'>danielvb.dev</p>
           </div>
           <div className='hidden lg:flex'>
             <ul className='hidden lg:flex -space-x-8'>
@@ -141,10 +127,6 @@ export default function Navbar({ styles, page }) {
                       />
                     </button>
                   </a>
-                </li>
-
-                <li className='p-4'>
-                  <button className={styles.button_circle}>T</button>
                 </li>
               </div>
             </ul>
@@ -263,10 +245,6 @@ export default function Navbar({ styles, page }) {
                     />
                   </button>
                 </a>
-              </li>
-
-              <li className='py-4 cursor-pointer'>
-                <button className={styles.button_circle_sidenav}>T</button>
               </li>
             </ul>
           </div>
