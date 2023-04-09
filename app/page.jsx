@@ -24,7 +24,7 @@ export default function Home() {
           Software Developer
           <span className='text-white'>.</span>
         </p>
-        <div className='mt-3'>
+        <div className='animate-bounce mt-3'>
           <button className={styles.first_button}>
             <Link href='/about'>
               <FontAwesomeIcon icon={faRightLong} />

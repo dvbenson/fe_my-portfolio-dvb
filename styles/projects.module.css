@@ -108,3 +108,19 @@
   border-radius: 50px;
   color: #ccff00;
 }
+
+/* BUTTONS */
+
+.filter_button {
+  background-color: #cab8ff;
+  color: black;
+  border-radius: 50px;
+  height: 30px;
+  width: 120px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: 0.125rem 0.125rem #2c3333, 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin: 4px 10px 4px 10px;
+}
+
+/* PROJECT CARD*/

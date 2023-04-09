@@ -139,3 +139,80 @@
   left: -10px;
   transform: translateY(20%);
 }
+
+/* FLIP-CARD */
+.container {
+  width: 240px;
+  height: 240px;
+  perspective: 800px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front {
+  background-color: #2c3333;
+  color: white;
+  box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.4);
+}
+.back {
+  background-image: radial-gradient(
+    circle at top right,
+    #ccff00,
+    #ffff5f,
+    #90c600
+  );
+  color: white;
+  border-radius: 2rem;
+  box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0.125rem 0.125rem black, 1px 1px 5px rgba(0, 0, 0, 0.4); */
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+/* BIG-CARD */
+.bgcard_container {
+  width: 320px;
+  height: 520px;
+  flex-shrink: 0;
+}
+@media (min-width: 550px) and (max-width: 1047px) {
+  .bgcard_container {
+    width: 520px;
+    height: 320px;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.bgcard {
+  width: 100%;
+  height: 100%;
+  background-color: #cab8ff;
+  border: solid black;
+  border-radius: 25px;
+  border-width: 9px;
+  box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.4);
+}
