@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import DefaultLayout from '@/components/DefaultLayout';
 import styles from '@/styles/projects.module.css';
