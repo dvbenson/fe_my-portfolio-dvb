@@ -1,11 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import DefaultLayout from '@/components/DefaultLayout';
 import styles from '@/styles/projects.module.css';
 
 export default function page() {
-  const [tabDisplay, setTabDisplay] = useState('objectives');
-
   const projects = [
     {
       Title: 'node REST API',
@@ -27,10 +26,8 @@ export default function page() {
         'PostgreSQL',
         'Husky',
         'Dotenv',
-        'Jest',
-        'Supertest',
+        'Jest/SuperTest',
         'Nodemon',
-        'Insomnia',
         'Render',
       ],
       Learning: [
@@ -59,11 +56,11 @@ export default function page() {
       Learning: [
         'Building custom components in React',
         'Modularising AXIOS to create cleaner code',
-        'Understanding the limitations and strengths of Bootstrap vs custom design',
-        'Mobile First Responsive design and accessibility',
+        'Understanding limitations and strengths of Bootstrap vs custom design',
+        'Mobile-first, responsive design',
         'React Hooks and state management: useState, useEffect, useContext',
         'General loading and error handling',
-        'Deploying and hosting a website to Netlify',
+        'Deploying and hosting to Netlify',
       ],
     },
     {
@@ -87,10 +84,13 @@ export default function page() {
         'What turbopack is and how it optimises build times',
         'Error and Load wrappers',
         'Deploying to Vercel',
-        'Mobile first design and accessibility (focus on colour contrast)',
+        'Mobile first design and accessibility',
       ],
     },
   ];
+  const [tabDisplayStates, setTabDisplayStates] = useState(
+    projects.map(() => 'Objectives')
+  );
 
   return (
     <DefaultLayout styles={styles} page={'projects'}>
@@ -117,8 +117,9 @@ export default function page() {
             className='flex flex-col justify-center items-center'
           >
             <div className='mb-16 mt-8 flex flex-col justify-center items-center gap-10'>
-              {projects.map((item) => (
+              {projects.map((item, index) => (
                 <div
+                  key={uuidv4()}
                   id='container'
                   className='flex flex-row justify-center items-center mt-8 mb-8'
                 >
@@ -146,63 +147,88 @@ export default function page() {
                         id='link-buttons'
                         className='flex flex-row justify-center items-center gap-2 mt-2'
                       >
-                        <a
-                          target='_blank'
-                          href={item.URL}
-                          rel='noopener noreferrer'
-                        >
-                          <button className='rounded-xl bg-[#9BCFCF] p-2 grow mb-3 shadow-md'>
+                        <button className='rounded-xl bg-[#9BCFCF] p-2 grow  mb-3 shadow-md'>
+                          <a
+                            target='_blank'
+                            href={item.URL}
+                            rel='noopener noreferrer'
+                          >
                             Host
-                          </button>
-                        </a>
+                          </a>
+                        </button>
 
-                        <a
-                          target='_blank'
-                          href={item.Repo}
-                          rel='noopener noreferrer'
-                        >
-                          <button className='rounded-xl bg-[#9BCFCF] p-2 grow mb-3 shadow-md'>
+                        <button className='rounded-xl bg-[#9BCFCF] p-2 mb-3 grow shadow-md'>
+                          <a
+                            target='_blank'
+                            href={item.Repo}
+                            rel='noopener noreferrer'
+                          >
                             Repo
-                          </button>
-                        </a>
+                          </a>
+                        </button>
                       </div>
                     </div>
                     <div
                       id='tabs-card'
                       className='flex  flex-col bg-gray p-2 min-[800px]:ml-2 rounded-xl w-80 lg:w-[480px] h-auto w-auto max-h-80'
                     >
-                      <div id='tab' className='bg-white p-2 rounded-xl h-80'>
-                        <p className='text-[#2C3333]'>
-                          {tabDisplay === 'objectives'
-                            ? item.Objectives
-                            : tabDisplay === 'stack'
-                            ? item.Stack
-                            : tabDisplay === 'learning'
-                            ? item.Learning
-                            : item.Objectives}
-                        </p>
+                      <div
+                        id='tab'
+                        className='bg-white p-2 rounded-xl h-80 list-disc'
+                      >
+                        {tabDisplayStates[index] === 'Objectives' ? (
+                          <ul className='list-disc'>
+                            {item.Objectives.map((item) => {
+                              return <li key={uuidv4()}>{item}</li>;
+                            })}
+                          </ul>
+                        ) : tabDisplayStates[index] === 'Stack' ? (
+                          <ul className='list-disc'>
+                            {item.Stack.map((item) => {
+                              return <li key={uuidv4()}>{item}</li>;
+                            })}
+                          </ul>
+                        ) : tabDisplayStates[index] === 'Learning' ? (
+                          <ul className='list-disc'>
+                            {item.Learning.map((item) => {
+                              return <li key={uuidv4()}>{item}</li>;
+                            })}
+                          </ul>
+                        ) : null}
                       </div>
                       <div
                         id='tabs-buttons'
                         className='flex flex-row justify-center items-center gap-2'
                       >
                         <button
-                          onClick={() => setTabDisplay('objectives')}
+                          onClick={() => {
+                            const newTabDisplayStates = [...tabDisplayStates];
+                            newTabDisplayStates[index] = 'Objectives';
+                            setTabDisplayStates(newTabDisplayStates);
+                          }}
                           className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
                         >
                           Objectives
                         </button>
                         <button
-                          onClick={() => setTabDisplay('stack')}
+                          onClick={() => {
+                            const newTabDisplayStates = [...tabDisplayStates];
+                            newTabDisplayStates[index] = 'Stack';
+                            setTabDisplayStates(newTabDisplayStates);
+                          }}
                           className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
                         >
                           Stack
                         </button>
                         <button
-                          onClick={() => setTabDisplay('learning')}
+                          onClick={() => {
+                            const newTabDisplayStates = [...tabDisplayStates];
+                            newTabDisplayStates[index] = 'Learning';
+                            setTabDisplayStates(newTabDisplayStates);
+                          }}
                           className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
                         >
-                          Learnings
+                          Learning
                         </button>
                       </div>
                     </div>
