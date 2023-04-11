@@ -8,14 +8,39 @@ export default function page() {
 
   const projects = [
     {
-      Title: 'node API',
+      Title: 'node REST API',
       Category: 'Backend',
       URL: 'https://badsauce-webservices.onrender.com/api',
       Repo: 'https://github.com/dvbenson/be_nc-news',
       image: '/assets/be_nc-news.jpeg',
-      Objectives: 'Create a node API to serve data to the frontend',
-      Stack: 'Node, Express, MongoDB, Mongoose, Heroku, Render',
-      Learning: 'How to create a node API, how to deploy to Heroku and Render',
+      Objectives: [
+        'Build a REST API using Node.js and Express.js',
+        'Use PostgreSQL to develop a relational database',
+        'Create a robust set of endpoints to serve CRUD operations',
+        'Deploy the API to Render',
+        'Use TDD to build the API',
+        'Utilise express router',
+      ],
+      Stack: [
+        'Node.js',
+        'Express.js',
+        'PostgreSQL',
+        'Husky',
+        'Dotenv',
+        'Jest',
+        'Supertest',
+        'Nodemon',
+        'Insomnia',
+        'Render',
+      ],
+      Learning: [
+        'MVC architecture',
+        'HTTPS requests',
+        'TDD',
+        'Modularisation of endpoints and error handling middleware using Express router',
+        'Deploying and hosting a node API',
+        'Environmenet setup for deployment using dotenv',
+      ],
     },
     {
       Title: 'React frontend',
@@ -23,19 +48,47 @@ export default function page() {
       URL: 'https://badsauce-nc-news.netlify.app/',
       Repo: 'https://github.com/dvbenson/fe_nc-news',
       image: '/assets/fe_nc-news.jpeg',
-      Objectives: 'Create a React frontend to consume the node API',
-      Stack: 'React, Axios, Netlify',
-      Learning: 'How to create a React frontend, how to deploy to Netlify',
+      Objectives: [
+        'Build a React frontend on a Node.js backend API',
+        'React Router implemented for site navigation',
+        'Use Axios to make HTTP requests to the API',
+        'Style frontend with Bootstrap and vanilla CSS',
+        'Deploy the frontend to Netlify',
+      ],
+      Stack: ['React', 'Bootstrap', 'Axios', 'Netlify'],
+      Learning: [
+        'Building custom components in React',
+        'Modularising AXIOS to create cleaner code',
+        'Understanding the limitations and strengths of Bootstrap vs custom design',
+        'Mobile First Responsive design and accessibility',
+        'React Hooks and state management: useState, useEffect, useContext',
+        'General loading and error handling',
+        'Deploying and hosting a website to Netlify',
+      ],
     },
     {
-      Title: 'Next.js Portfolio Project',
+      Title: 'Next.js Portfolio',
       Category: 'Frontend',
       URL: 'https://danielvb.dev/',
       Repo: 'https://github.com/dvbenson/my-portfolio-dvb',
       image: '/assets/dvb_portfolio.jpeg',
-      Objectives: 'Create a portfolio website using Next.js',
-      Stack: 'Next.js, Vercel',
-      Learning: 'How to create a Next.js website, how to deploy to Vercel',
+      Objectives: [
+        'Build a portfolio to showcase my skills and projects in a unique and creative way',
+        'Learn a new framework: Next.js 13 and understand its experimental app directory and project structure',
+        'Use TailwindCSS for styling',
+        'Utilise turbopack to optimise build times',
+        'Deploy to Vercel',
+      ],
+      Stack: ['Next.js', 'TailwindCSS', 'Turbopack', 'Vercel'],
+      Learning: [
+        'SSR/CSR and how Next.js leverages both',
+        'Custom components in Next.js',
+        'Differences between TailwindCSS and other libraries such as Bootstrap',
+        'What turbopack is and how it optimises build times',
+        'Error and Load wrappers',
+        'Deploying to Vercel',
+        'Mobile first design and accessibility (focus on colour contrast)',
+      ],
     },
   ];
 
@@ -102,6 +155,7 @@ export default function page() {
                             Host
                           </button>
                         </a>
+
                         <a
                           target='_blank'
                           href={item.Repo}
