@@ -7,7 +7,7 @@ import styles from '@/styles/projects.module.css';
 export default function page() {
   const projects = [
     {
-      Title: 'node REST API',
+      Title: 'Node.js REST API',
       Category: 'Backend',
       URL: 'https://badsauce-webservices.onrender.com/api',
       Repo: 'https://github.com/dvbenson/be_nc-news',
@@ -15,7 +15,7 @@ export default function page() {
       Objectives: [
         'Build a REST API using Node.js and Express.js',
         'Use PostgreSQL to develop a relational database',
-        'Create a robust set of endpoints to serve CRUD operations',
+        'Create endpoints to serve CRUD operations',
         'Deploy the API to Render',
         'Use TDD to build the API',
         'Utilise express router',
@@ -35,7 +35,7 @@ export default function page() {
         'HTTPS requests',
         'TDD',
         'Modularisation of endpoints and error handling middleware using Express router',
-        'Deploying and hosting a node API',
+
         'Environmenet setup for deployment using dotenv',
       ],
     },
@@ -60,7 +60,6 @@ export default function page() {
         'Mobile-first, responsive design',
         'React Hooks and state management: useState, useEffect, useContext',
         'General loading and error handling',
-        'Deploying and hosting to Netlify',
       ],
     },
     {
@@ -71,7 +70,7 @@ export default function page() {
       image: '/assets/dvb_portfolio.jpeg',
       Objectives: [
         'Build a portfolio to showcase my skills and projects in a unique and creative way',
-        'Learn a new framework: Next.js 13 and understand its experimental app directory and project structure',
+        'Learn Next.js 13 with its experimental app directory',
         'Use TailwindCSS for styling',
         'Utilise turbopack to optimise build times',
         'Deploy to Vercel',
@@ -83,7 +82,6 @@ export default function page() {
         'Differences between TailwindCSS and other libraries such as Bootstrap',
         'What turbopack is and how it optimises build times',
         'Error and Load wrappers',
-        'Deploying to Vercel',
         'Mobile first design and accessibility',
       ],
     },
@@ -134,7 +132,7 @@ export default function page() {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className='w-full h-auto lg:w-96 max-w-sm max-h-sm mt-4 rounded-xl shadow-md'
+                        className='w-full h-auto lg:w-96 max-w-sm max-h-md mt-4 rounded-xl shadow-md'
                       />
                       <div
                         id='project-title'
@@ -147,7 +145,7 @@ export default function page() {
                         id='link-buttons'
                         className='flex flex-row justify-center items-center gap-2 mt-2'
                       >
-                        <button className='rounded-xl bg-[#9BCFCF] p-2 grow  mb-3 shadow-md'>
+                        <button className='rounded-xl bg-[#9BCFCF] p-2 grow  mb-3 shadow-md active:bg-[#336666] active:text-white'>
                           <a
                             target='_blank'
                             href={item.URL}
@@ -157,7 +155,7 @@ export default function page() {
                           </a>
                         </button>
 
-                        <button className='rounded-xl bg-[#9BCFCF] p-2 mb-3 grow shadow-md'>
+                        <button className='rounded-xl bg-[#9BCFCF] p-2 mb-3 grow shadow-md active:bg-[#336666] active:text-white'>
                           <a
                             target='_blank'
                             href={item.Repo}
@@ -170,35 +168,56 @@ export default function page() {
                     </div>
                     <div
                       id='tabs-card'
-                      className='flex  flex-col bg-gray p-2 min-[800px]:ml-2 rounded-xl w-80 lg:w-[480px] h-auto w-auto max-h-80'
+                      className='flex flex-col bg-gray p-2 min-[800px]:ml-2 rounded-xl w-80 lg:w-[480px] h-auto w-auto max-h-80'
                     >
                       <div
                         id='tab'
-                        className='bg-white p-2 rounded-xl h-80 list-disc'
+                        className='bg-white p-2 rounded-xl h-80  justify-center items-center flex'
                       >
                         {tabDisplayStates[index] === 'Objectives' ? (
-                          <ul className='list-disc'>
+                          <ul className='p-1 text-[#2C3333] '>
                             {item.Objectives.map((item) => {
-                              return <li key={uuidv4()}>{item}</li>;
+                              return (
+                                <li
+                                  key={uuidv4()}
+                                  className='text-center odd:bg-purple'
+                                >
+                                  {item}
+                                </li>
+                              );
                             })}
                           </ul>
                         ) : tabDisplayStates[index] === 'Stack' ? (
-                          <ul className='list-disc'>
+                          <ul className='p-1 text-[#2C3333]'>
                             {item.Stack.map((item) => {
-                              return <li key={uuidv4()}>{item}</li>;
+                              return (
+                                <li
+                                  key={uuidv4()}
+                                  className='text-center odd:bg-purple'
+                                >
+                                  {item}
+                                </li>
+                              );
                             })}
                           </ul>
                         ) : tabDisplayStates[index] === 'Learning' ? (
-                          <ul className='list-disc'>
+                          <ul className='pl-1 text-[#2C3333]'>
                             {item.Learning.map((item) => {
-                              return <li key={uuidv4()}>{item}</li>;
+                              return (
+                                <li
+                                  key={uuidv4()}
+                                  className='text-center odd:bg-purple'
+                                >
+                                  {item}
+                                </li>
+                              );
                             })}
                           </ul>
                         ) : null}
                       </div>
                       <div
                         id='tabs-buttons'
-                        className='flex flex-row justify-center items-center gap-2'
+                        className=' flex flex-row justify-center items-center gap-2'
                       >
                         <button
                           onClick={() => {
@@ -206,7 +225,7 @@ export default function page() {
                             newTabDisplayStates[index] = 'Objectives';
                             setTabDisplayStates(newTabDisplayStates);
                           }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
+                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
                         >
                           Objectives
                         </button>
@@ -216,7 +235,7 @@ export default function page() {
                             newTabDisplayStates[index] = 'Stack';
                             setTabDisplayStates(newTabDisplayStates);
                           }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
+                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
                         >
                           Stack
                         </button>
@@ -226,7 +245,7 @@ export default function page() {
                             newTabDisplayStates[index] = 'Learning';
                             setTabDisplayStates(newTabDisplayStates);
                           }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md'
+                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
                         >
                           Learning
                         </button>

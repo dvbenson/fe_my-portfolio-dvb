@@ -3,25 +3,78 @@ import styles from '@/styles/about.module.css';
 
 export default function page() {
   const about_cards = {
-    Experience: 'Here it is',
-    Values: 'Here it is',
-    Interests: 'Here it is',
-    Skills: 'Here it is',
-    Stack: 'Here it is',
-    Design: 'Here it is',
+    Experience: [
+      'Full Stack Development',
+      'REST API',
+      'UI/UX Design',
+      'Deployment/Hosting',
+      'Agile Methodologies',
+      'Project Management',
+      'Team Leadership',
+      'Product Delivery',
+      'User-Centered Service',
+    ],
+    Values: [
+      'Communication',
+      'Transparency',
+      'Empathy',
+      'Collaboration',
+      'Creativity',
+    ],
+    Interests_prof: [
+      'Full Stack',
+      'Frontend',
+      'Design',
+      'UI/UX',
+      'AI/LLMs',
+      'Product Management',
+    ],
+    Interests_pers: [
+      'Cooking',
+      'Baking',
+      'Illustration',
+      'Travel',
+      'Language-Learning',
+    ],
+    Skills: [
+      'Test Driven Development',
+      'Paired Programming',
+      'Object Oriented Programming',
+      'Functional Programming',
+      'Mobile-First',
+      'Responsive Design',
+      'Accessibility',
+      'Version Control',
+      'Databases',
+    ],
+    Stack: [
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Node.js',
+      'Express.js',
+      'Postgres',
+      'SQL',
+      'React',
+      'Next.js',
+      'Tailwind',
+      'Bootstrap',
+      'Jest',
+    ],
+    Design: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Framer'],
   };
   return (
     <DefaultLayout styles={styles} page={'about'}>
-      <main className='min-h-screen bg-electric-lime pb-16'>
+      <main className='min-h-screen bg-white pb-16'>
         <section>
           <div className='container mx-auto px-4 md:px-16'>
-            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-black pb-2'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-pink pb-2'>
               <div className='flex items-center justify-center'>
                 <p className='text-gray mr-64 sm:mr-72'>It's all</p>
               </div>
               <div className='flex items-center justify-center w-full'>
-                <h1 className='text-white text-6xl sm:text-7xl'>
-                  About Me<span className='text-electric-lime'>.</span>
+                <h1 className='text-black-gray text-6xl sm:text-7xl'>
+                  About Me<span className='text-white'>.</span>
                 </h1>
               </div>
             </div>
@@ -101,9 +154,9 @@ export default function page() {
         </section>
         <section>
           <div className='container mx-auto sm:mx-42 px-4 md:px-0 mt-8'>
-            <div className='flex flex-col sm:flex-row flex-nowrap items-start justify-start h-auto sm:mx-42 sm:h-36 bg-white p-4 lg:mx-42 shadow-xl'>
+            <div className='flex flex-col sm:flex-row flex-nowrap items-start justify-start h-auto sm:mx-42 sm:h-36 bg-pink p-4 lg:mx-42 shadow-xl'>
               <div className='mb-4 sm:mt-4 sm:ml-4 md:w-6/12'>
-                <p className='text-black sm:text-2xl lg:text-3xl'>
+                <p className='text-black-gray sm:text-2xl lg:text-3xl'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   quis neque congue, rhoncus eros eget, dapibus est. Duis
                   commodo, lectus nec faucibus laoreet, erat sapien tempus
@@ -111,7 +164,7 @@ export default function page() {
                 </p>
               </div>
               <div className='mb-4 sm:mt-4 sm:ml-4 md:w-6/12'>
-                <p className='text-black sm:text-2xl lg:text-3xl'>
+                <p className='text-black-gray sm:text-2xl lg:text-3xl'>
                   {' '}
                   Curabitur posuere est sit amet ex tincidunt, non viverra eros
                   pretium. Mauris a elementum nisi. Fusce ut est pulvinar,
