@@ -27,7 +27,6 @@ export default function page() {
             <div className=' rounded-full p-2 bg-gray w-40 h-12 text-center flex justify-center items-center'>
               <h1 className='text-2xl xl:text-6xl'>Get in touch:</h1>
             </div>
-            <ContactForm />
           </div>
         </section>
       </main>
