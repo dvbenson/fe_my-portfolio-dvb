@@ -157,7 +157,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  transition: transform 1000ms;
+  transition: transform 1500ms;
   transform-style: preserve-3d;
 }
 
@@ -187,4 +187,29 @@
   box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.4);
 
   transform: rotateY(180deg);
+}
+
+/* BIG-CARD */
+.bgcard_container {
+  width: 240px;
+  height: 480px;
+  flex-shrink: 0;
+}
+@media (min-width: 550px) and (max-width: 1047px) {
+  .bgcard_container {
+    width: 480px;
+    height: 240px;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.bgcard {
+  width: 100%;
+  height: 100%;
+  background-color: #cab8ff;
+  border: solid black;
+  border-radius: 25px;
+  border-width: 9px;
+  box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.4);
 }
