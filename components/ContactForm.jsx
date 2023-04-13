@@ -5,6 +5,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
 
@@ -43,6 +44,14 @@ export default function ContactForm() {
         name='email'
         placeholder='Email'
         value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type='text'
+        name='subject'
+        placeholder='Subject'
+        value={formData.subject}
         onChange={handleChange}
         required
       />

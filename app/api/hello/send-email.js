@@ -1,34 +1,27 @@
-// api/send-email.js
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).end();
-  }
+  if (req.method === 'POST') {
+    const { name, email, subject, message } = req.body;
 
-  const { name, email, message } = req.body;
+    try {
+      const msg = {
+        to: 'danielvb@danielvb.dev',
+        from: email,
+        subject: `New message from ${name}: ${subject}`,
+        text: message,
+      };
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com', // Use your email service's SMTP host
-    port: 465,
-    auth: {
-      user: 'danielvb@danielvb.dev', // Your email address
-      pass: 'your_email_password', // Your email password
-    },
-  });
+      await sgMail.send(msg);
 
-  const mailOptions = {
-    from: email,
-    to: 'your@email.com',
-    subject: `New message from ${name}`,
-    text: message,
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).end();
-  } catch (error) {
-    console.error(error);
-    res.status(500).end();
+      res.status(200).json({ success: true });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Error sending email' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
   }
 }
