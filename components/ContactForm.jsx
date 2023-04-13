@@ -1,4 +1,5 @@
 'use client';
+import { NextResponse } from 'next/server';
 import React, { useState } from 'react';
 
 export default function ContactForm() {
@@ -8,25 +9,26 @@ export default function ContactForm() {
     subject: '',
     message: '',
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('/api/send-email', {
+    const response = await fetch('/api/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
-
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
     if (response.status === 200) {
-      alert('Email sent successfully');
+      return NextResponse.json({ status: 'success', data });
     } else {
-      alert('Error sending email');
+      return NextResponse.json({ status: 'failure' });
     }
   };
   return (
