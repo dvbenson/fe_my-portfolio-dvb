@@ -1,7 +1,7 @@
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
-import '../styles/output.css';
+import '../styles/dist.css';
 
 export default function RootLayout({ children }) {
   return (

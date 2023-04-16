@@ -5,10 +5,12 @@ export default function Footer({ styles, page }) {
         page === 'home'
           ? 'bg-black h-24'
           : page === 'about'
+          ? 'bg-white h-24'
+          : page === 'projects'
+          ? 'bg-blue h-24'
+          : page === 'contact'
           ? 'bg-pink h-24'
-          : page === 'contact' || page === 'projects'
-          ? 'bg-electric-lime h-24'
-          : 'bg-pink h-24'
+          : null
       }
     >
       <div className='container flex justify-center py-2'>

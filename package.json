@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next --turbo\" \"tailwindcss --input /styles/globals.css --output /styles/output.css --watch\"",
-    "build": "tailwindcss /styles/globals.css --output /styles/output.css && next build",
+    "dev": "concurrently \"next --turbo\" \"tailwindcss --input styles/globals.css --output styles/dist.css --watch\"",
+    "build": "tailwindcss styles/globals.css --output styles/dist.css && next build",
     "start": "next start",
     "lint": "next lint"
   },
