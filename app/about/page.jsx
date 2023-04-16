@@ -21,7 +21,7 @@ export default function page() {
         </section>
         <section>
           <div className='container mx-auto px-4 flex flex-col'>
-            <div className='container mx-auto px-4 w-full flex flex-col mt-8 gap-5 md:gap-24'>
+            <div className='container mx-auto px-4 w-full flex flex-col mt-16 gap-5 md:gap-24'>
               <div
                 id='img-text block 1'
                 className='container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-x-20'
