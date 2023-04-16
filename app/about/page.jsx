@@ -20,20 +20,20 @@ export default function page() {
           </div>
         </section>
         <section>
-          <div className='flex flex-col gap-5 m-8 xl:mt-16 xl:ml-64 xl:mr-48'>
-            <div className='w-full flex flex-col  xl:w-[1350px]  gap-10 md:gap-20 lg:gap-5 2xl:mr-40'>
+          <div className='container mx-auto px-4 flex flex-col gap-x-20'>
+            <div className='container mx-auto px-4 w-full flex flex-col mt-8'>
               <div
                 id='img-text block 1'
-                className='flex flex-col sm:flex-row justify-center items-center'
+                className='container mx-auto px-4 flex flex-col sm:flex-row justify-center items-center min-[480px]:mb-24'
               >
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center '>
                   <img
                     src='/assets/food_cartoon.svg'
                     alt='about'
-                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white mr-16 lg:mr-32'
+                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full'
                   />
                 </div>
-                <div className='flex flex-col sm:w-[280px] gap-4 mx-4 ml-8'>
+                <div className='flex flex-col gap-4 min-[480px]:w-[320px] min-[480px]:h-[280px]'>
                   <h2 className='text-3xl lg:text-4xl xl:text-5xl'>
                     Get to know me.
                   </h2>
@@ -51,9 +51,9 @@ export default function page() {
               </div>
               <div
                 id='img-text block 2'
-                className='flex flex-col sm:flex-row justify-center items-center'
+                className='container mx-auto px-4 flex flex-col sm:flex-row justify-center items-center min-[480px]:mb-48'
               >
-                <div className='flex flex-col sm:w-[280px] md:w-[320px]  gap-4 mx-4 mr-16'>
+                <div className='flex flex-col  gap-4  max-[640px]:order-2 min-[480px]:w-[320px] min-[480px]:h-[280px] '>
                   <h2 className='text-3xl lg:text-4xl xl:text-5xl'>
                     Experience.
                   </h2>
@@ -69,26 +69,26 @@ export default function page() {
                     hone in on what makes me tick as a developer.
                   </p>
                 </div>
-                <div className='flex justify-center items-center ml-8'>
+                <div className='flex justify-center items-center'>
                   <img
                     src='/assets/coding_cartoon.svg'
                     alt='about'
-                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white'
+                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full  max-[640px]:order-1'
                   />
                 </div>
               </div>
               <div
                 id='img-text block 3'
-                className='flex flex-col sm:flex-row justify-center items-center lg:mb-16'
+                className='container mx-auto px-4 flex flex-col sm:flex-row justify-center items-center min-[480px]:mb-64'
               >
-                <div className='flex justify-center items-center mt-24 2xl:'>
+                <div className='flex justify-center items-center '>
                   <img
                     src='/assets/draw_cartoon.svg'
                     alt='about'
-                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white mr-8'
+                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full  m'
                   />
                 </div>
-                <div className='flex flex-col sm:w-[280px] md:w-[360px] md:h-[240px] mb-16 gap-4 mx-4 ml-16'>
+                <div className='flex flex-col  gap-4 min-[480px]:w-[320px] min-[480px]:h-[280px]'>
                   <h2 className='text-3xl lg:text-4xl xl:text-5xl'>Skills.</h2>
 
                   <p className='font-serif font-medium text-base md:text-lg lg:text-2xl xl:text-xl'>
@@ -107,9 +107,9 @@ export default function page() {
               </div>
               <div
                 id='img-text block 4'
-                className='flex flex-col sm:flex-row justify-center items-center mt-24 '
+                className='container mx-auto px-4 flex flex-col sm:flex-row justify-center items-center mt-16 sm:mt-0'
               >
-                <div className='flex flex-col sm:w-[280px] gap-4'>
+                <div className='flex flex-col gap-4 max-[640px]:order-1 min-[480px]:w-[320px] min-[480px]:h-[280px]'>
                   <h2 className='text-3xl text-center md:-4xl lg:text-4xl xl:text-5xl'>
                     Stack.
                   </h2>
@@ -129,7 +129,7 @@ export default function page() {
                   <img
                     src='/assets/error_cartoon.svg'
                     alt='about'
-                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white'
+                    className='w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full  max-[640px]:order-2  max-[640px]:mb-8 '
                   />
                 </div>
               </div>
