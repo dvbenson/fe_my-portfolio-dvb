@@ -69,7 +69,7 @@ export default function page() {
       Repo: 'https://github.com/dvbenson/my-portfolio-dvb',
       image: '/assets/dvb_portfolio.jpeg',
       Objectives: [
-        'Build a portfolio to showcase my skills and projects in a unique and creative way',
+        'Design',
         'Learn Next.js 13 with its experimental app directory',
         'Use TailwindCSS for styling',
         'Utilise turbopack to optimise build times',
@@ -119,20 +119,20 @@ export default function page() {
                 <div
                   key={uuidv4()}
                   id='container'
-                  className='flex flex-row justify-center items-center mt-8 mb-8 z-40'
+                  className='flex flex-col md:flex-row justify-center items-center mx-8 z-40'
                 >
                   <div
                     id='card'
-                    className='relative bg-[#336666] flex flex-col mx-8 min-[800px]:flex-row p-4 rounded-xl lg:w-[800px] lg:h-[320px] shadow-2xl'
+                    className='relative bg-[#336666] flex flex-col p-4 rounded-xl w-full md:w-auto md:flex-row shadow-2xl'
                   >
                     <div
                       id='image-card'
-                      className='flex flex-col min-[800px]:mr-2'
+                      className='flex flex-col mb-4 md:mb-0 md:mr-2'
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className='w-full h-auto lg:w-96 max-w-sm max-h-md mt-4 rounded-xl shadow-md'
+                        className='w-full h-auto md:w-96 max-w-md max-h-md mt-4 rounded-xl shadow-md'
                       />
                       <div
                         id='project-title'
@@ -168,11 +168,11 @@ export default function page() {
                     </div>
                     <div
                       id='tabs-card'
-                      className='flex flex-col bg-gray p-2 min-[800px]:ml-2 rounded-xl w-80 lg:w-[480px] h-auto w-auto max-h-80'
+                      className='flex flex-col bg-gray p-2 rounded-xl w-full  lg:w-[480px] h-auto'
                     >
                       <div
                         id='tab'
-                        className='bg-white p-2 rounded-xl h-80  justify-center items-center flex'
+                        className='bg-white p-2 rounded-xl  justify-center items-center flex'
                       >
                         {tabDisplayStates[index] === 'Objectives' ? (
                           <ul className='p-1 text-[#2C3333] '>
