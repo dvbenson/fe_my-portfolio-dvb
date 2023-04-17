@@ -13,13 +13,13 @@ export default function Footer({ styles, page }) {
           : null
       }
     >
-      <div className='container flex justify-center py-2'>
-        <div className='row'>
-          <div className='col-md-4'>
-            <p className='font-serif font-medium text-white text-center text-sm'>
+      <div className='container mx-auto px-4 h-full flex flex-col justify-end'>
+        <div className='row '>
+          <div className='col-md-4 space-y-2'>
+            <p className='font-serif font-semibold text-black-gray text-center text-sm '>
               danielvb@danielvb.dev
             </p>
-            <p className='font-serif font-medium text-white text-center text-xs mt-2 text-[#CCCCCC]'>
+            <p className='font-serif font-medium text-black-gray text-center text-xs mb-4'>
               © 2023 All Rights Reserved
             </p>
           </div>
