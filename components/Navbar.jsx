@@ -17,6 +17,21 @@ export default function Navbar({ styles, page }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const getSideBarBgColor = (pathname) => {
+    switch (pathname) {
+      case '/':
+        return 'bg-electric-lime';
+      case '/about':
+        return 'bg-pink';
+      case '/projects':
+        return 'bg-electric-lime';
+      case '/contact':
+        return 'bg-electric-lime';
+      default:
+        return 'bg-electric-lime';
+    }
+  };
+
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
@@ -141,7 +156,9 @@ export default function Navbar({ styles, page }) {
         <div
           className={
             menuOpen
-              ? 'fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen bg-electric-lime p-10 sm:p-30 ease-in duration-500'
+              ? `fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen p-10 sm:p-30 ease-in duration-250 z-50 ${getSideBarBgColor(
+                  pathname
+                )}`
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >

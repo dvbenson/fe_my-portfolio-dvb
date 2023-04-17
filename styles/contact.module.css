@@ -108,3 +108,28 @@
   border-radius: 50px;
   color: #ccff00;
 }
+
+.button_form {
+  background-color: white;
+  color: #2c3333;
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: 0.125rem 0.125rem black, 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin: 4px 10px 4px 10px;
+  font-weight: bold;
+}
+.button_form:active {
+  background-color: #cccccc;
+  color: #2c3333;
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  padding: 0px;
+  font-size: 16px;
+  box-shadow: inset -0px -0px 5px rgba(0, 0, 0, 0.4);
+  margin: 6px 10px 2px 10px;
+  font-weight: bold;
+}

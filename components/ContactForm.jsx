@@ -85,7 +85,7 @@ export default function ContactForm() {
           required
         ></textarea>
         <div className='items-center text-center mt-8'>
-          <button type='submit' className={styles.button}>
+          <button type='submit' className={styles.button_form}>
             Send
           </button>
         </div>

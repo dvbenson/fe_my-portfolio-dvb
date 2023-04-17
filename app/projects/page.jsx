@@ -119,7 +119,7 @@ export default function page() {
                 <div
                   key={uuidv4()}
                   id='container'
-                  className='flex flex-row justify-center items-center mt-8 mb-8'
+                  className='flex flex-row justify-center items-center mt-8 mb-8 z-40'
                 >
                   <div
                     id='card'

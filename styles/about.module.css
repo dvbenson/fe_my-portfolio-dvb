@@ -41,8 +41,8 @@
   font-weight: bold;
 }
 .button_active_sidenav {
-  background-color: #ccff00;
-  color: rgba(144, 198, 0);
+  background-color: #ffcccc;
+  color: #c69696;
   border-radius: 50px;
   height: 30px;
   width: 80px;
