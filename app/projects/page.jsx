@@ -114,29 +114,26 @@ export default function page() {
             id='wrapper'
             className='flex flex-col justify-center items-center'
           >
-            <div className='mb-16 mt-8 flex flex-col justify-center items-center gap-10'>
+            <div className='mb-16 mt-12 flex flex-col justify-center items-center gap-10'>
               {projects.map((item, index) => (
                 <div
                   key={uuidv4()}
                   id='container'
-                  className='flex flex-col md:flex-row justify-center items-center mx-8 z-40'
+                  className='flex flex-col justify-center items-center px-4 md:px-0 z-40'
                 >
                   <div
                     id='card'
-                    className='relative bg-[#336666] flex flex-col p-4 rounded-xl w-full md:w-auto md:flex-row shadow-2xl'
+                    className='relative bg-[#336666] flex flex-col p-4 rounded-xl w-auto shadow-2xl'
                   >
-                    <div
-                      id='image-card'
-                      className='flex flex-col mb-4 md:mb-0 md:mr-2'
-                    >
+                    <div id='image-card' className='flex flex-col mb-4 md:mb-0'>
                       <img
                         src={item.image}
                         alt={item.title}
-                        className='w-full h-auto md:w-96 max-w-md max-h-md mt-4 rounded-xl shadow-md'
+                        className='w-auto h-auto max-w-full md:max-w-[480px] mt-4 rounded-xl shadow-md'
                       />
                       <div
                         id='project-title'
-                        className='absolute -top-6 inset-x-0 left-1/2 min-[800px]:left-1/4 transform -translate-x-1/2 bg-gray rounded-full h-12 w-48 p-2 mb-1 text-center items-center justify-center flex'
+                        className='absolute -top-6 inset-x-0 left-1/2 transform -translate-x-1/2 bg-gray rounded-full h-12 w-48 p-2 mb-1 text-center items-center justify-center flex'
                       >
                         <h1>{item.Title}</h1>
                       </div>
@@ -168,7 +165,7 @@ export default function page() {
                     </div>
                     <div
                       id='tabs-card'
-                      className='flex flex-col bg-gray p-2 rounded-xl w-full  lg:w-[480px] h-auto'
+                      className='flex flex-col bg-gray p-2 rounded-xl w-full md:w-auto h-auto max-w-[480px]'
                     >
                       <div
                         id='tab'
