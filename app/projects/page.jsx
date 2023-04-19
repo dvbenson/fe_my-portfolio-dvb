@@ -172,7 +172,7 @@ export default function page() {
                         className='bg-white p-2 rounded-xl  justify-center items-center flex'
                       >
                         {tabDisplayStates[index] === 'Objectives' ? (
-                          <ul className='p-1 text-[#2C3333] '>
+                          <ul className='font-serif font-medium p-1 text-[#2C3333] '>
                             {item.Objectives.map((item) => {
                               return (
                                 <li
@@ -185,7 +185,7 @@ export default function page() {
                             })}
                           </ul>
                         ) : tabDisplayStates[index] === 'Stack' ? (
-                          <ul className='p-1 text-[#2C3333]'>
+                          <ul className='font-serif font-medium p-1 text-[#2C3333]'>
                             {item.Stack.map((item) => {
                               return (
                                 <li
@@ -198,7 +198,7 @@ export default function page() {
                             })}
                           </ul>
                         ) : tabDisplayStates[index] === 'Learning' ? (
-                          <ul className='pl-1 text-[#2C3333]'>
+                          <ul className='font-serif font-medium pl-1 text-[#2C3333]'>
                             {item.Learning.map((item) => {
                               return (
                                 <li
