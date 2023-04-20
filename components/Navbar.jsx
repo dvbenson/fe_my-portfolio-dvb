@@ -46,7 +46,7 @@ export default function Navbar({ styles, page }) {
             : page === 'about'
             ? 'w-full h-24 bg-white border-t-0 shadow-none'
             : page === 'projects'
-            ? 'w-full h-24 bg-blue border-t-0 shadow-none'
+            ? 'w-full h-24 bg-gray-black border-t-0 shadow-none'
             : 'w-full h-24 bg-pink border-t-0 shadow-none'
         }
       >

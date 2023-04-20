@@ -1,5 +1,4 @@
 'use client';
-import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import DefaultLayout from '@/components/DefaultLayout';
 import styles from '@/styles/projects.module.css';
@@ -13,12 +12,13 @@ export default function page() {
       Repo: 'https://github.com/dvbenson/be_nc-news',
       image: '/assets/be_nc-news.jpeg',
       Objectives: [
-        'Build a REST API using Node.js and Express.js',
-        'Use PostgreSQL to develop a relational database',
-        'Create endpoints to serve CRUD operations',
-        'Deploy the API to Render',
-        'Use TDD to build the API',
-        'Utilise express router',
+        'REST API using Node.js and Express.js',
+        'PostgreSQL relational database',
+        'Full CRUD functionality',
+        'MVC architecture',
+        'Modularisation of endpoints with Express Router',
+        'Robust unit and integrated testing using Jest',
+        'Jest-supertest, Nodemon and Insomnia for endpoint tests',
       ],
       Stack: [
         'Node.js',
@@ -26,17 +26,9 @@ export default function page() {
         'PostgreSQL',
         'Husky',
         'Dotenv',
-        'Jest/SuperTest',
+        'Jest',
         'Nodemon',
         'Render',
-      ],
-      Learning: [
-        'MVC architecture',
-        'HTTPS requests',
-        'TDD',
-        'Modularisation of endpoints and error handling middleware using Express router',
-
-        'Environmenet setup for deployment using dotenv',
       ],
     },
     {
@@ -48,19 +40,13 @@ export default function page() {
       Objectives: [
         'Build a React frontend on a Node.js backend API',
         'React Router implemented for site navigation',
-        'Use Axios to make HTTP requests to the API',
-        'Style frontend with Bootstrap and vanilla CSS',
-        'Deploy the frontend to Netlify',
-      ],
-      Stack: ['React', 'Bootstrap', 'Axios', 'Netlify'],
-      Learning: [
-        'Building custom components in React',
+        'Bootstrap and vanilla CSS',
+        'React custom components',
         'Modularising AXIOS to create cleaner code',
-        'Understanding limitations and strengths of Bootstrap vs custom design',
         'Mobile-first, responsive design',
         'React Hooks and state management: useState, useEffect, useContext',
-        'General loading and error handling',
       ],
+      Stack: ['React', 'Bootstrap', 'Axios', 'Netlify'],
     },
     {
       Title: 'Next.js Portfolio',
@@ -69,30 +55,21 @@ export default function page() {
       Repo: 'https://github.com/dvbenson/my-portfolio-dvb',
       image: '/assets/dvb_portfolio.jpeg',
       Objectives: [
-        'Design',
-        'Learn Next.js 13 with its experimental app directory',
-        'Use TailwindCSS for styling',
+        'Figma design-systems and prototyping',
+        'Next.js 13s new app directory',
+        'TailwindCSS for styling',
         'Utilise turbopack to optimise build times',
-        'Deploy to Vercel',
-      ],
-      Stack: ['Next.js', 'TailwindCSS', 'Turbopack', 'Vercel'],
-      Learning: [
-        'SSR/CSR and how Next.js leverages both',
+        'Understanding of SSR/CSR and how Next.js leverages both',
         'Custom components in Next.js',
-        'Differences between TailwindCSS and other libraries such as Bootstrap',
-        'What turbopack is and how it optimises build times',
-        'Error and Load wrappers',
         'Mobile first design and accessibility',
       ],
+      Stack: ['Next.js', 'TailwindCSS', 'Turbopack', 'Vercel'],
     },
   ];
-  const [tabDisplayStates, setTabDisplayStates] = useState(
-    projects.map(() => 'Objectives')
-  );
 
   return (
     <DefaultLayout styles={styles} page={'projects'}>
-      <main className='min-h-screen bg-blue'>
+      <main className='min-h-screen bg-gray-black'>
         <section>
           <div className='container mx-auto px-4 md:px-0'>
             <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
@@ -112,50 +89,48 @@ export default function page() {
         <section>
           <div
             id='wrapper'
-            className='flex flex-col justify-center items-center'
+            className='flex flex-col lg:flex-row lg:flex-wrap justify-center items-center mx-8 md:mx-auto gap-20 py-4'
           >
-            <div className='mb-16 mt-12 flex flex-col justify-center items-center gap-10'>
-              {projects.map((item, index) => (
+            {projects.map((project) => {
+              return (
                 <div
                   key={uuidv4()}
-                  id='container'
-                  className='flex flex-col justify-center items-center px-4 md:px-0 z-40'
+                  id='card-container'
+                  className='container flex flex-col max-w-[480px]  mt-16 hover:shadow-2xl transition-all duration-300 ease-in-out transform even:hover:-rotate-1 odd:hover:rotate-1 hover:scale-105'
                 >
                   <div
                     id='card'
-                    className='relative bg-[#336666] flex flex-col p-4 rounded-xl w-auto shadow-2xl'
+                    className='flex flex-col rounded-xl w-auto shadow-xl'
                   >
-                    <div id='image-card' className='flex flex-col mb-4 md:mb-0'>
+                    <div className='relative'>
                       <img
-                        src={item.image}
-                        alt={item.title}
-                        className='w-auto h-auto max-w-full md:max-w-[480px] mt-4 rounded-xl shadow-md'
+                        src={project.image}
+                        alt={project.Title}
+                        className='w-auto h-auto max-w-full md:max-w-[480px] rounded-t-xl shadow-md'
                       />
                       <div
                         id='project-title'
-                        className='absolute -top-6 inset-x-0 left-1/2 transform -translate-x-1/2 bg-gray rounded-full h-12 w-48 p-2 mb-1 text-center items-center justify-center flex'
+                        className='absolute -top-6 inset-x-0 left-1/2 transform -translate-x-1/2 bg-purple rounded-full h-12 w-48 p-2 mb-1 text-center items-center justify-center flex'
                       >
-                        <h1>{item.Title}</h1>
+                        <h1>{project.Title}</h1>
                       </div>
-
                       <div
                         id='link-buttons'
-                        className='flex flex-row justify-center items-center gap-2 mt-2'
+                        className='absolute bottom-0 right-0 flex flex-row justify-center items-center gap-2 m-2'
                       >
-                        <button className='rounded-xl bg-[#9BCFCF] p-2 grow  mb-3 shadow-md active:bg-[#336666] active:text-white'>
+                        <button className='rounded-full bg-gray w-12 h-9 active:bg-black active:text-white'>
                           <a
                             target='_blank'
-                            href={item.URL}
+                            href={project.URL}
                             rel='noopener noreferrer'
                           >
                             Host
                           </a>
                         </button>
-
-                        <button className='rounded-xl bg-[#9BCFCF] p-2 mb-3 grow shadow-md active:bg-[#336666] active:text-white'>
+                        <button className='rounded-full bg-gray w-12 h-9 active:bg-black active:text-white'>
                           <a
                             target='_blank'
-                            href={item.Repo}
+                            href={project.Repo}
                             rel='noopener noreferrer'
                           >
                             Repo
@@ -163,95 +138,36 @@ export default function page() {
                         </button>
                       </div>
                     </div>
-                    <div
-                      id='tabs-card'
-                      className='flex flex-col bg-gray p-2 rounded-xl w-full md:w-auto h-auto max-w-[480px]'
-                    >
-                      <div
-                        id='tab'
-                        className='bg-white p-2 rounded-xl  justify-center items-center flex'
-                      >
-                        {tabDisplayStates[index] === 'Objectives' ? (
-                          <ul className='font-serif font-medium p-1 text-[#2C3333] '>
-                            {item.Objectives.map((item) => {
-                              return (
-                                <li
-                                  key={uuidv4()}
-                                  className='text-center odd:bg-purple'
-                                >
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        ) : tabDisplayStates[index] === 'Stack' ? (
-                          <ul className='font-serif font-medium p-1 text-[#2C3333]'>
-                            {item.Stack.map((item) => {
-                              return (
-                                <li
-                                  key={uuidv4()}
-                                  className='text-center odd:bg-purple'
-                                >
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        ) : tabDisplayStates[index] === 'Learning' ? (
-                          <ul className='font-serif font-medium pl-1 text-[#2C3333]'>
-                            {item.Learning.map((item) => {
-                              return (
-                                <li
-                                  key={uuidv4()}
-                                  className='text-center odd:bg-purple'
-                                >
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        ) : null}
-                      </div>
-                      <div
-                        id='tabs-buttons'
-                        className=' flex flex-row justify-center items-center gap-2'
-                      >
-                        <button
-                          onClick={() => {
-                            const newTabDisplayStates = [...tabDisplayStates];
-                            newTabDisplayStates[index] = 'Objectives';
-                            setTabDisplayStates(newTabDisplayStates);
-                          }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
-                        >
-                          Objectives
-                        </button>
-                        <button
-                          onClick={() => {
-                            const newTabDisplayStates = [...tabDisplayStates];
-                            newTabDisplayStates[index] = 'Stack';
-                            setTabDisplayStates(newTabDisplayStates);
-                          }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
-                        >
-                          Stack
-                        </button>
-                        <button
-                          onClick={() => {
-                            const newTabDisplayStates = [...tabDisplayStates];
-                            newTabDisplayStates[index] = 'Learning';
-                            setTabDisplayStates(newTabDisplayStates);
-                          }}
-                          className='rounded-xl bg-[#969696] p-2 mt-2 grow shadow-md focus:bg-[#2C3333] focus:text-white'
-                        >
-                          Learning
-                        </button>
-                      </div>
+                    <div id='body' className='bg-black-gray'>
+                      <ul className='font-serif font-medium text-[#FAF9F6] text-center mx-4 py-4 leading-relaxed'>
+                        {project.Objectives.map((item) => {
+                          return (
+                            <li
+                              key={uuidv4()}
+                              className='odd:bg-[#5A6662] p-1 first:rounded-t-xl last:rounded-b-xl'
+                            >
+                              {item}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                    <div id='footer' className='bg-gray rounded-b-xl'>
+                      <ul className='font-serif font-medium flex flex-row flex-wrap mx-3 py-3 justify-center gap-x-4'>
+                        {project.Stack.map((tech) => {
+                          return (
+                            <li key={uuidv4()}>
+                              <span className='text-white'>#</span>
+                              {tech}
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </section>
       </main>
