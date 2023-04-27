@@ -1,4 +1,4 @@
-import { Analystics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
