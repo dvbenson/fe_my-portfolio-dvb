@@ -1,9 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-
 import Link from 'next/link';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -13,24 +11,24 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
-export default function Navbar({ styles, page }) {
+export default function Navbar({ styles }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const getSideBarBgColor = (pathname) => {
-    switch (pathname) {
-      case '/':
-        return 'bg-electric-lime';
-      case '/about':
-        return 'bg-pink';
-      case '/projects':
-        return 'bg-electric-lime';
-      case '/contact':
-        return 'bg-electric-lime';
-      default:
-        return 'bg-electric-lime';
-    }
-  };
+  // const getSideBarBgColor = (pathname) => {
+  //   switch (pathname) {
+  //     case '/':
+  //       return 'bg-electric-lime';
+  //     case '/about':
+  //       return 'bg-pink';
+  //     case '/projects':
+  //       return 'bg-electric-lime';
+  //     case '/contact':
+  //       return 'bg-electric-lime';
+  //     default:
+  //       return 'bg-electric-lime';
+  //   }
+  // };
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -40,15 +38,7 @@ export default function Navbar({ styles, page }) {
     <>
       <nav
         id='navbar'
-        className={
-          page === 'home'
-            ? 'fixed w-full h-24 bg-electric-lime border-t-0 shadow-none'
-            : page === 'about'
-            ? 'w-full h-24 bg-white border-t-0 shadow-none'
-            : page === 'projects'
-            ? 'w-full h-24 bg-gray-black border-t-0 shadow-none'
-            : 'w-full h-24 bg-pink border-t-0 shadow-none'
-        }
+        className='fixed w-full h-24 bg-electric-lime border-t-0 shadow-none z-50'
       >
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
           <div className='ml-4'>
@@ -57,7 +47,7 @@ export default function Navbar({ styles, page }) {
           <div className='hidden lg:flex'>
             <ul className='hidden lg:flex -space-x-8'>
               <li className='p-4'>
-                <Link href='/'>
+                <Link href='#home'>
                   <button
                     className={
                       pathname === '/' ? styles.button_active : styles.button
@@ -68,7 +58,7 @@ export default function Navbar({ styles, page }) {
                 </Link>
               </li>
               <li className='p-4'>
-                <Link href='/about'>
+                <Link href='#about'>
                   <button
                     className={
                       pathname === '/about'
@@ -81,7 +71,7 @@ export default function Navbar({ styles, page }) {
                 </Link>
               </li>
               <li className='p-4'>
-                <Link href='/projects'>
+                <Link href='#projects'>
                   <button
                     className={
                       pathname === '/projects'
@@ -94,7 +84,7 @@ export default function Navbar({ styles, page }) {
                 </Link>
               </li>
               <li className='p-4'>
-                <Link href='/contact'>
+                <Link href='#contact'>
                   <button
                     className={
                       pathname === '/contact'
@@ -156,9 +146,7 @@ export default function Navbar({ styles, page }) {
         <div
           className={
             menuOpen
-              ? `fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen p-10 sm:p-30 ease-in duration-250 z-50 ${getSideBarBgColor(
-                  pathname
-                )}`
+              ? `fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen p-10 sm:p-30 ease-in duration-250 z-50 bg-electric-lime`
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -176,7 +164,7 @@ export default function Navbar({ styles, page }) {
                 <Link href='/'>
                   <button
                     className={
-                      pathname === '/'
+                      pathname === '#home'
                         ? styles.button_active_sidenav
                         : styles.button_sidenav
                     }
@@ -189,7 +177,7 @@ export default function Navbar({ styles, page }) {
                 className='py-4 cursor-pointer'
                 onClick={() => setMenuOpen(false)}
               >
-                <Link href='/about'>
+                <Link href='#about'>
                   <button
                     className={
                       pathname === '/about'
@@ -205,7 +193,7 @@ export default function Navbar({ styles, page }) {
                 className='py-4 cursor-pointer'
                 onClick={() => setMenuOpen(false)}
               >
-                <Link href='/projects'>
+                <Link href='#projects'>
                   <button
                     className={
                       pathname === '/projects'
@@ -221,7 +209,7 @@ export default function Navbar({ styles, page }) {
                 className='py-4 cursor-pointer'
                 onClick={() => setMenuOpen(false)}
               >
-                <Link href='/contact'>
+                <Link href='#contact'>
                   <button
                     className={
                       pathname === '/contact'
