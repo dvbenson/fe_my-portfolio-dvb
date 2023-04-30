@@ -13,7 +13,7 @@ import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Navbar({ styles }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);

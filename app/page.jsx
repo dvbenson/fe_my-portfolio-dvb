@@ -75,7 +75,10 @@ export default function Home() {
   return (
     <DefaultLayout styles={styles}>
       <main className='flex flex-col items-center justify-center bg-white pt-40'>
-        <section id='home' className=' mt-16 sm:mt-24 min-h-screen'>
+        <section
+          id='home'
+          className=' mt-8 sm:mt-16 lg:mt-32  mb-52 sm:mb-64 min-[1400]:mb-80'
+        >
           <p className='text-center subpixel-antialiased text-3xl md:text-4xl lg:text-5xl text-electric-lime tracking-normal'>
             <span className='text-black '>I'm Daniel VB</span>
           </p>
@@ -90,34 +93,33 @@ export default function Home() {
             Web Developer
             <span className='text-black'>.</span>
           </p>
-          <div className='flex justify-center items-center mt-16'>
+          <div className='flex flex-col xl:flex-row justify-center items-center mt-8'>
             <a
               target='_blank'
               href='https://docs.google.com/document/d/1r39N-vulIz3M0qfF1d2GJqh5Wagn9sEmxQuTyPdGEh0/export?format=pdf'
               rel='noopener noreferrer'
             >
-              <button className={styles.first_button}>Download CV</button>
+              <button className={styles.first_button}>CV</button>
             </a>
             <a target='blank' href='#projects' rel='noopener noreferrer'>
-              <button className={styles.first_button}>My Projects</button>
+              <button className={styles.first_button}>Work</button>
             </a>
           </div>
         </section>
         <section id='about' className='min-h-screen'>
-          <div className={styles.content_wrapper}>
-            <div className='container mx-auto px-4 md:px-0'>
-              <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
-                <div className='flex items-center justify-center'>
-                  <p className='text-gray mr-64 sm:mr-72'>It's all</p>
-                </div>
-                <div className='flex items-center justify-center w-full'>
-                  <h1 className='text-black-gray text-6xl sm:text-7xl'>
-                    About Me<span className='text-white'>.</span>
-                  </h1>
-                </div>
+          <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+              <div className='flex items-center justify-center'>
+                <p className='text-gray mr-64 sm:mr-72'>It's all</p>
+              </div>
+              <div className='flex items-center justify-center w-full'>
+                <h1 className='text-black-gray text-6xl sm:text-7xl'>
+                  About Me<span className='text-white'>.</span>
+                </h1>
               </div>
             </div>
           </div>
+
           <section>
             <div className='container mx-auto px-4 flex flex-col'>
               <div className='container mx-auto px-4 w-full flex flex-col mt-16 gap-5 md:gap-24'>
@@ -240,41 +242,40 @@ export default function Home() {
           </section>
         </section>
         <section id='projects' className='mt-24 min-h-screen'>
-          <div className={styles.content_wrapper}>
-            <div className='container mx-auto px-4 md:px-0'>
-              <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
-                <div className='flex items-center justify-center'>
-                  <p className='text-gray text-lg mr-48 sm:mr-72 whitespace-nowrap'>
-                    The good stuff
-                  </p>
-                </div>
-                <div className='flex flex-nowrap items-center justify-center w-full'>
-                  <h1 className='text-black text-6xl sm:text-7xl'>
-                    Projects<span className='text-white'>.</span>
-                  </h1>
-                </div>
+          <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+              <div className='flex items-center justify-center'>
+                <p className='text-gray text-lg mr-48 sm:mr-72 whitespace-nowrap'>
+                  The good stuff
+                </p>
+              </div>
+              <div className='flex flex-nowrap items-center justify-center w-full'>
+                <h1 className='text-black text-6xl sm:text-7xl'>
+                  Projects<span className='text-white'>.</span>
+                </h1>
               </div>
             </div>
           </div>
+
           <section>
-            <div className='overflow-x-auto w-[900px] h-[720px]'>
+            <div className='overflow-y-auto lg:overflow-x-auto snap-proximity w-[360px] sm:w-[420px] lg:w-[900px] xl:w-[1200px] mt-16 h-[560px] md:h-[720px] mx-auto'>
               <ul
                 id='wrapper'
-                className='list-none flex justify-center items-center mx-8 md:mx-auto gap-20 py-4 pl-20'
+                className='list-none flex flex-col lg:flex-row justify-center items-center gap-20 py-4'
               >
                 {projects.map((project) => {
                   return (
                     <li
                       key={uuidv4()}
-                      className='first:ml-[900px] snap-start last:mr[900px]'
+                      className='lg:first:ml-[900px] xl:first:ml-[720px] snap-center'
                     >
                       <div
                         id='card-container'
-                        className='container flex flex-col max-w-[480px]  mt-16 hover:shadow-2xl transition-all duration-300 ease-in-out transform even:hover:-rotate-1 odd:hover:rotate-1 hover:scale-105'
+                        className='container flex flex-col max-w-[480px] rounded-xl  transition-all duration-300 ease-in-out transform even:hover:-rotate-1 odd:hover:rotate-1 hover:scale-105'
                       >
                         <div
                           id='card'
-                          className='flex flex-col rounded-xl w-auto shadow-xl'
+                          className='flex flex-col rounded-xl w-auto drop-shadow-xl hover:drop-shadow-xl mt-8'
                         >
                           <div className='relative'>
                             <img
@@ -348,25 +349,21 @@ export default function Home() {
           </section>
         </section>
         <section id='contact' className='mt-24 min-h-screen'>
-          <div className={styles.content_wrapper}>
-            <div className='container mx-auto px-4 md:px-0'>
-              <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
-                <div className='flex items-center justify-center'>
-                  <p className='text-gray text-lg mr-48 sm:mr-72 whitespace-nowrap'>
-                    Reach out
-                  </p>
-                </div>
-                <div className='flex items-center justify-center w-full'>
-                  <h1 className='text-black text-6xl sm:text-7xl'>
-                    Contact<span className='text-white'>.</span>
-                  </h1>
-                </div>
+          <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+              <div className=''>
+                <p className='text-gray text-lg ml-4 mr-48 sm:mr-72 whitespace-nowrap'>
+                  Reach out
+                </p>
+              </div>
+              <div className=''>
+                <h1 className='text-black text-6xl sm:text-7xl'>
+                  Contact<span className='text-white'>.</span>
+                </h1>
               </div>
             </div>
           </div>
-          <section>
-            <ContactForm />
-          </section>
+          <ContactForm />
         </section>
       </main>
     </DefaultLayout>
