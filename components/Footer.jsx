@@ -6,9 +6,9 @@ export default function Footer({ styles }) {
   return (
     <footer className='bg-electric-lime h-24 font-serif font-semibold text-black-gray'>
       <div className='container mx-auto px-4 h-full flex flex-col justify-end'>
-        <ul className='flex flex-col justify-center text-center items-center'>
-          <div className='flex -space-x-8'>
-            <li className='p-4'>
+        <ul className='flex flex-col justify-center text-center items-center mb-2'>
+          <li className='p-2'>
+            <div className='flex'>
               <a
                 target='_blank'
                 href='https://github.com/dvbenson'
@@ -18,9 +18,7 @@ export default function Footer({ styles }) {
                   <FontAwesomeIcon icon={faGithubAlt} className={styles.icon} />
                 </button>
               </a>
-            </li>
 
-            <li className='p-4'>
               <a
                 target='_blank'
                 href='https://www.linkedin.com/in/danielvictorbenson/'
@@ -33,12 +31,12 @@ export default function Footer({ styles }) {
                   />
                 </button>
               </a>
-            </li>
-          </div>
+            </div>
+          </li>
           <li>
             <p className='text-center text-sm'>danielvb@danielvb.dev</p>
           </li>
-          <li>
+          <li className=''>
             <p className='text-center text-xs'>© 2023 All Rights Reserved</p>
           </li>
         </ul>

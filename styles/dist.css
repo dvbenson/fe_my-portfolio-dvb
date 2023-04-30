@@ -693,6 +693,10 @@ html {
   margin-bottom: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -904,6 +908,10 @@ html {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-x-20 {
