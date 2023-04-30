@@ -15,21 +15,6 @@ export default function Navbar({ styles }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // const getSideBarBgColor = (pathname) => {
-  //   switch (pathname) {
-  //     case '/':
-  //       return 'bg-electric-lime';
-  //     case '/about':
-  //       return 'bg-pink';
-  //     case '/projects':
-  //       return 'bg-electric-lime';
-  //     case '/contact':
-  //       return 'bg-electric-lime';
-  //     default:
-  //       return 'bg-electric-lime';
-  //   }
-  // };
-
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
@@ -48,52 +33,22 @@ export default function Navbar({ styles }) {
             <ul className='hidden lg:flex -space-x-8'>
               <li className='p-4'>
                 <Link href='#home'>
-                  <button
-                    className={
-                      pathname === '/' ? styles.button_active : styles.button
-                    }
-                  >
-                    Home
-                  </button>
+                  <button className={styles.button}>Home</button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='#about'>
-                  <button
-                    className={
-                      pathname === '/about'
-                        ? styles.button_active
-                        : styles.button
-                    }
-                  >
-                    About
-                  </button>
+                  <button className={styles.button}>About</button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='#projects'>
-                  <button
-                    className={
-                      pathname === '/projects'
-                        ? styles.button_active
-                        : styles.button
-                    }
-                  >
-                    Projects
-                  </button>
+                  <button className={styles.button}>Projects</button>
                 </Link>
               </li>
               <li className='p-4'>
                 <Link href='#contact'>
-                  <button
-                    className={
-                      pathname === '/contact'
-                        ? styles.button_active
-                        : styles.button
-                    }
-                  >
-                    Contact
-                  </button>
+                  <button className={styles.button}>Contact</button>
                 </Link>
               </li>
               <div className='flex -space-x-8'>
@@ -161,16 +116,8 @@ export default function Navbar({ styles }) {
                 className='py-4 cursor-pointer'
                 onClick={() => setMenuOpen(false)}
               >
-                <Link href='/'>
-                  <button
-                    className={
-                      pathname === '#home'
-                        ? styles.button_active_sidenav
-                        : styles.button_sidenav
-                    }
-                  >
-                    Home
-                  </button>
+                <Link href='#home'>
+                  <button className={styles.button_sidenav}>Home</button>
                 </Link>
               </li>
               <li
@@ -178,15 +125,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#about'>
-                  <button
-                    className={
-                      pathname === '/about'
-                        ? styles.button_active_sidenav
-                        : styles.button_sidenav
-                    }
-                  >
-                    About
-                  </button>
+                  <button className={styles.button_sidenav}>About</button>
                 </Link>
               </li>
               <li
@@ -194,15 +133,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#projects'>
-                  <button
-                    className={
-                      pathname === '/projects'
-                        ? styles.button_active_sidenav
-                        : styles.button_sidenav
-                    }
-                  >
-                    Projects
-                  </button>
+                  <button className={styles.button_sidenav}>Projects</button>
                 </Link>
               </li>
               <li
@@ -210,15 +141,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#contact'>
-                  <button
-                    className={
-                      pathname === '/contact'
-                        ? styles.button_active_sidenav
-                        : styles.button_sidenav
-                    }
-                  >
-                    Contact
-                  </button>
+                  <button className={styles.button_sidenav}>Contact</button>
                 </Link>
               </li>
 
