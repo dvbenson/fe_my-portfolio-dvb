@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import { ScrollOffset } from '@/components/ScrollOffset';
 import ContactForm from '@/components/ContactForm';
 import { v4 as uuidv4 } from 'uuid';
 import DefaultLayout from '../components/DefaultLayout';
@@ -22,7 +22,7 @@ export default function Home() {
         'Full CRUD functionality',
         'MVC architecture',
         'Modularisation of endpoints with Express Router',
-        'Robust unit and integrated testing using Jest',
+        'Robust unit testing using Jest',
         'Jest-supertest, Nodemon and Insomnia for endpoint tests',
       ],
       Stack: [
@@ -58,7 +58,7 @@ export default function Home() {
       Category: 'Frontend',
       URL: 'https://danielvb.dev/',
       Repo: 'https://github.com/dvbenson/my-portfolio-dvb',
-      image: '/assets/dvb_portfolio.jpeg',
+      image: '/assets/portfolio.jpeg',
       Objectives: [
         'Figma design-systems and prototyping',
         'Next.js 13s new app directory',
@@ -75,9 +75,10 @@ export default function Home() {
   return (
     <DefaultLayout styles={styles}>
       <main className='flex flex-col items-center justify-center bg-[#222222] pt-40'>
+        <ScrollOffset id='home' />
         <section
           id='home'
-          className=' mt-8 sm:mt-16 lg:mt-32  mb-52 sm:mb-64 min-[1400]:mb-80'
+          className='mt-8 sm:mt-16   mb-52 sm:mb-64 min-[1400]:mb-80'
         >
           <p className='text-center subpixel-antialiased text-3xl md:text-4xl lg:text-5xl text-white tracking-normal'>
             I'm Daniel VB
@@ -102,7 +103,7 @@ export default function Home() {
           <div className='flex flex-row justify-center items-center mt-8'>
             <a
               target='_blank'
-              href='https://docs.google.com/document/d/1r39N-vulIz3M0qfF1d2GJqh5Wagn9sEmxQuTyPdGEh0/export?format=pdf'
+              href='https://docs.google.com/document/d/196GwDfqe2s1_D2V1AIqsJjzzB9j7mWeEN6Tb94DtYOg/export?format=pdf'
               rel='noopener noreferrer'
             >
               <button className={styles.first_button}>CV</button>
@@ -113,7 +114,8 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <section id='about' className='min-h-screen'>
+        <ScrollOffset id='about' />
+        <section id='about' className='mb-24 min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
             <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className='flex items-center justify-center'>
@@ -154,14 +156,23 @@ export default function Home() {
                       Get to know me.
                     </h2>
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      I'm a full stack developer, I love the JavaScript
-                      eco-system and I'm a highly intuitive self-teacher.
+                      Co-dependant on my white board and post-it notes long
+                      before the coding bug bit. Building things has always been
+                      my go-to, a golden thread of sorts, one that has clicked
+                      into place since I first opened up my terminal.
                     </p>
-
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      Outside of programming you can find me drawing, designing,
-                      baking or cooking. I'm an avid Linguist, having majored in
-                      Languages, so I love learning a new phrase or two!
+                      My teenage years were a lot of playing World of Warcraft
+                      whilst making snazzy forum signatures. Before then and
+                      onwards, I’m a creative person - drawing, illustrating,
+                      doodling for endless hours.
+                    </p>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                      That curiosity to create and need to make also fuels my
+                      love to learn, leading me to travel and learn languages. I
+                      love to cook and bake. I keep on top of my fitness to
+                      combat cookie consumption and I’m generally tinkering or
+                      fiddling with something.
                     </p>
                   </div>
                 </div>
@@ -182,14 +193,22 @@ export default function Home() {
                     </h2>
 
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      With a background in user-centred services and products,
-                      Agile is a methodology I am confident in and have used to
-                      deliver successful products.
+                      As a career-changer and a recent Northcoder bootcamp
+                      graduate, my journey to become a web developer has taken a
+                      route consisting of self-taught fundamentals, almost 500
+                      coding hours over 13 weeks and countless days and nights
+                      of self-learning.
                     </p>
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      Since then I have trained with Northcoders in full stack
-                      development, working intensively to develop my skills and
-                      hone in on what makes me tick as a developer.
+                      Over a decade of professional experience has led me from
+                      civil engineering, to education and a few trips into
+                      user-centred service.
+                    </p>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                      Fortunately, across that time I’ve garnered a toolset that
+                      has positioned me uniquely into the flows of understanding
+                      Agile methodologies, having worked in industries that
+                      follow similar iterative approaches.
                     </p>
                   </div>
                 </div>
@@ -210,17 +229,28 @@ export default function Home() {
                     </h2>
 
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      I am able to take a product through its entire lifecycle.
-                      Whether that's confidently building a backend REST API in
-                      Node, routing with Express or creating a frontend UI in
-                      React or Next.js.
+                      My training in PERN has equipped me with the knowledge of
+                      full stack development and the ability, confidence and
+                      motivation to work alone, creating effective, viable
+                      products with the latest technologies.
                     </p>
                     <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
-                      I have taken a particular interest in UI/UX design,
-                      becoming knowledgeable in design practices and prototyping
-                      using Figma and Framer, and styling with vanilla CSS or
-                      Tailwind to develop mobile-first, accessible and
-                      responsive products.
+                      I am able to take a product through its entire lifecycle.
+                      Whether that's confidently building a backend REST API in
+                      Node, routing with Express or creating frontend components
+                      in React or Next.js.
+                    </p>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                      I have particular interest in UI/UX design, building solid
+                      knowledge in design practices and prototyping using Figma
+                      and Framer, and styling with vanilla CSS or Tailwind to
+                      develop mobile-first, accessible and responsive products.
+                    </p>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                      This is all fuel in the engine as I follow my trajectory
+                      into web development, being open and actively pursuing
+                      roles that are full stack or front end in the react
+                      universe.
                     </p>
                   </div>
                 </div>
@@ -241,7 +271,7 @@ export default function Home() {
                     </h2>
 
                     <ul className='text-[#E9E3E6] font-serif font-medium text-center text-base md:text-lg  xl:text-xl'>
-                      <li> JavaScript, HTML, CSS</li>
+                      <li> JavaScript, TypeScript</li>
                       <li> React, Next.js</li>
                       <li>React Native</li>
                       <li> Node.js, Express.js</li>
@@ -255,7 +285,8 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section id='projects' className='mt-24 min-h-screen'>
+        <ScrollOffset id='projects' />
+        <section id='projects' className='mb-24 min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
             <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className='flex items-center justify-center'>
@@ -352,14 +383,13 @@ export default function Home() {
                             </ul>
                           </div>
                           <div id='footer' className='bg-gray rounded-b-xl'>
-                            <ul className='font-serif font-semibold flex flex-row flex-wrap mx-3 py-3 justify-center gap-x-4 text-[#FF5900] drop-shadow-sm'>
+                            <ul className='font-serif font-semibold flex flex-row flex-wrap mx-3 py-3 justify-center gap-x-4 text-[#FF7A18] drop-shadow-sm'>
                               {project.Stack.map((tech) => {
                                 return (
                                   <li
                                     key={uuidv4()}
-                                    className='hover:text-[#FF7A18]'
+                                    className='hover:text-[#FF5900]'
                                   >
-                                    {/* <span className='text-[#FF7A18]'>#</span> */}
                                     {tech}
                                   </li>
                                 );
@@ -375,7 +405,8 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section id='contact' className='mt-24 min-h-screen'>
+        <ScrollOffset id='contact' />
+        <section id='contact' className='min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
             <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className=''>

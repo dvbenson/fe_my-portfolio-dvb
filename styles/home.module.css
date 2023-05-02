@@ -82,3 +82,11 @@
 .icon {
   margin: auto;
 }
+
+.target::before {
+  content: '';
+  display: block;
+  height: 24px; /* Adjust this value to match the height of your navbar */
+  margin-top: -24px; /* Use the same value as height but with a negative sign */
+  visibility: hidden;
+}
