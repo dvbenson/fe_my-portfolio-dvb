@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +12,6 @@ import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Navbar({ styles }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const pathname = usePathname();
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -23,11 +21,11 @@ export default function Navbar({ styles }) {
     <>
       <nav
         id='navbar'
-        className='fixed w-full h-24 bg-electric-lime border-t-0 shadow-none z-50'
+        className='fixed w-full h-24 bg-[#222222] border-t-0 shadow-none z-50'
       >
         <div className='flex justify-between items-center h-full w-full px-4 2x1:px-16'>
           <div className='ml-4'>
-            <p className='text-3xl'>danielvb.dev</p>
+            <p className='text-3xl text-[#E9E3E6]'>danielvb.dev</p>
           </div>
           <div className='hidden lg:flex'>
             <ul className='hidden lg:flex -space-x-8'>
@@ -101,7 +99,7 @@ export default function Navbar({ styles }) {
         <div
           className={
             menuOpen
-              ? `fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen p-10 sm:p-30 ease-in duration-250 z-50 bg-electric-lime`
+              ? `fixed left-0 top-0 w-[65%] sm:w-[30%] lg:hidden h-screen p-10 sm:p-30 ease-in duration-250 z-50 bg-[#222222]`
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -117,7 +115,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#home'>
-                  <button className={styles.button_sidenav}>Home</button>
+                  <button className={styles.button}>Home</button>
                 </Link>
               </li>
               <li
@@ -125,7 +123,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#about'>
-                  <button className={styles.button_sidenav}>About</button>
+                  <button className={styles.button}>About</button>
                 </Link>
               </li>
               <li
@@ -133,7 +131,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#projects'>
-                  <button className={styles.button_sidenav}>Projects</button>
+                  <button className={styles.button}>Projects</button>
                 </Link>
               </li>
               <li
@@ -141,7 +139,7 @@ export default function Navbar({ styles }) {
                 onClick={() => setMenuOpen(false)}
               >
                 <Link href='#contact'>
-                  <button className={styles.button_sidenav}>Contact</button>
+                  <button className={styles.button}>Contact</button>
                 </Link>
               </li>
 
@@ -151,7 +149,7 @@ export default function Navbar({ styles }) {
                   href='https://github.com/dvbenson'
                   rel='noopener noreferrer'
                 >
-                  <button className={styles.button_circle_sidenav}>
+                  <button className={styles.button_circle}>
                     <FontAwesomeIcon
                       icon={faGithubAlt}
                       className={styles.icon}
@@ -166,7 +164,7 @@ export default function Navbar({ styles }) {
                   href='https://www.linkedin.com/in/danielvictorbenson/'
                   rel='noopener noreferrer'
                 >
-                  <button className={styles.button_circle_sidenav}>
+                  <button className={styles.button_circle}>
                     <FontAwesomeIcon
                       icon={faLinkedinIn}
                       className={styles.icon}

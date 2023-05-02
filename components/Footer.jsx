@@ -4,7 +4,7 @@ import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Footer({ styles }) {
   return (
-    <footer className='bg-electric-lime h-24 font-serif font-semibold text-black-gray'>
+    <footer className='bg-[#222222] h-24 font-serif font-semibold text-[#E9E3E6]'>
       <div className='container mx-auto px-4 h-full flex flex-col justify-end'>
         <ul className='flex flex-col justify-center text-center items-center mb-2'>
           <li className='p-2'>

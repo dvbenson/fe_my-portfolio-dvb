@@ -74,26 +74,32 @@ export default function Home() {
 
   return (
     <DefaultLayout styles={styles}>
-      <main className='flex flex-col items-center justify-center bg-white pt-40'>
+      <main className='flex flex-col items-center justify-center bg-[#222222] pt-40'>
         <section
           id='home'
           className=' mt-8 sm:mt-16 lg:mt-32  mb-52 sm:mb-64 min-[1400]:mb-80'
         >
-          <p className='text-center subpixel-antialiased text-3xl md:text-4xl lg:text-5xl text-electric-lime tracking-normal'>
-            <span className='text-black '>I'm Daniel VB</span>
+          <p className='text-center subpixel-antialiased text-3xl md:text-4xl lg:text-5xl text-white tracking-normal'>
+            I'm Daniel VB
           </p>
 
-          <p className='text-center subpixel-antialiased text-6xl md:text-7xl lg:text-8xl text-electric-lime tracking-normal'>
-            <span className='underline underline-offset-8 decoration-white'>
-              <span className='text-black'>A</span> Full Stack
-            </span>
+          <p
+            className='text-center subpixel-antialiased text-6xl md:text-7xl lg:text-8xl text-electric-lime tracking-normal'
+            style={{
+              background:
+                'linear-gradient(to right, #CCFF00, #FFEA20 55%, #FF7A18)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            A Full Stack
           </p>
 
-          <p className='text-center subpixel-antialiased text-6xl md:text-7xl lg:text-8xl text-electric-lime tracking-normal'>
+          <p className='text-center subpixel-antialiased text-6xl md:text-7xl lg:text-8xl text-white tracking-normal'>
             Web Developer
-            <span className='text-black'>.</span>
+            <span className='text-[#B2B2B2]'>.</span>
           </p>
-          <div className='flex flex-col xl:flex-row justify-center items-center mt-8'>
+          <div className='flex flex-row justify-center items-center mt-8'>
             <a
               target='_blank'
               href='https://docs.google.com/document/d/1r39N-vulIz3M0qfF1d2GJqh5Wagn9sEmxQuTyPdGEh0/export?format=pdf'
@@ -101,20 +107,29 @@ export default function Home() {
             >
               <button className={styles.first_button}>CV</button>
             </a>
-            <a target='blank' href='#projects' rel='noopener noreferrer'>
-              <button className={styles.first_button}>Work</button>
-            </a>
+
+            <button className={`${styles.first_button} shadow-lg`}>
+              <a href='#projects'>Work</a>
+            </button>
           </div>
         </section>
         <section id='about' className='min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
-            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className='flex items-center justify-center'>
-                <p className='text-gray mr-64 sm:mr-72'>It's all</p>
+                <p className='text-[#EDE7E3] mr-64 sm:mr-72'>It's all</p>
               </div>
-              <div className='flex items-center justify-center w-full'>
-                <h1 className='text-black-gray text-6xl sm:text-7xl'>
-                  About Me<span className='text-white'>.</span>
+              <div
+                className='flex items-center justify-center'
+                style={{
+                  background:
+                    'linear-gradient(to right, #CCFF00, #FFEA20 55%, #FF7A18)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                <h1 className='text-electric-lime text-6xl sm:text-7xl'>
+                  About Me<span className='text-[#E9E3E6]'>.</span>
                 </h1>
               </div>
             </div>
@@ -135,15 +150,15 @@ export default function Home() {
                     />
                   </div>
                   <div className='flex flex-col gap-4 min-[480px]:w-[400px] min-[480px]:h-[280px]'>
-                    <h2 className='text-3xl lg:text-4xl xl:text-5xl'>
+                    <h2 className='text-purple text-3xl lg:text-4xl xl:text-5xl'>
                       Get to know me.
                     </h2>
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       I'm a full stack developer, I love the JavaScript
                       eco-system and I'm a highly intuitive self-teacher.
                     </p>
 
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       Outside of programming you can find me drawing, designing,
                       baking or cooking. I'm an avid Linguist, having majored in
                       Languages, so I love learning a new phrase or two!
@@ -162,16 +177,16 @@ export default function Home() {
                     />
                   </div>
                   <div className='flex flex-col  gap-4 min-[480px]:w-[400px] min-[480px]:h-[280px] md:order-1'>
-                    <h2 className='text-3xl lg:text-4xl xl:text-5xl'>
+                    <h2 className='text-purple text-3xl lg:text-4xl xl:text-5xl'>
                       Experience.
                     </h2>
 
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       With a background in user-centred services and products,
                       Agile is a methodology I am confident in and have used to
                       deliver successful products.
                     </p>
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       Since then I have trained with Northcoders in full stack
                       development, working intensively to develop my skills and
                       hone in on what makes me tick as a developer.
@@ -190,17 +205,17 @@ export default function Home() {
                     />
                   </div>
                   <div className='flex flex-col  gap-4 min-[480px]:w-[400px] min-[480px]:h-[280px]'>
-                    <h2 className='text-3xl lg:text-4xl xl:text-5xl'>
+                    <h2 className='text-purple text-3xl lg:text-4xl xl:text-5xl'>
                       Skills.
                     </h2>
 
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       I am able to take a product through its entire lifecycle.
                       Whether that's confidently building a backend REST API in
                       Node, routing with Express or creating a frontend UI in
                       React or Next.js.
                     </p>
-                    <p className='font-serif font-medium text-base md:text-lg  xl:text-xl'>
+                    <p className='text-[#E9E3E6] font-serif font-medium text-base md:text-lg  xl:text-xl'>
                       I have taken a particular interest in UI/UX design,
                       becoming knowledgeable in design practices and prototyping
                       using Figma and Framer, and styling with vanilla CSS or
@@ -221,16 +236,15 @@ export default function Home() {
                     />
                   </div>
                   <div className='flex flex-col gap-4 min-[480px]:w-[400px] min-[480px]:h-[280px] md:order-1'>
-                    <h2 className='text-3xl text-center md:-4xl lg:text-4xl xl:text-5xl'>
+                    <h2 className='text-purple text-3xl text-center md:-4xl lg:text-4xl xl:text-5xl'>
                       Stack.
                     </h2>
 
-                    <ul className='font-serif font-medium text-center text-base md:text-lg  xl:text-xl'>
+                    <ul className='text-[#E9E3E6] font-serif font-medium text-center text-base md:text-lg  xl:text-xl'>
                       <li> JavaScript, HTML, CSS</li>
-                      <li> React, Next.js, Vue.js</li>
+                      <li> React, Next.js</li>
                       <li>React Native</li>
                       <li> Node.js, Express.js</li>
-                      <li> Python, Django, DRF</li>
                       <li> Postgres, SQL</li>
                       <li> Tailwind, Bootstrap</li>
                       <li> Figma, Framer</li>
@@ -243,15 +257,23 @@ export default function Home() {
         </section>
         <section id='projects' className='mt-24 min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
-            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className='flex items-center justify-center'>
-                <p className='text-gray text-lg mr-48 sm:mr-72 whitespace-nowrap'>
+                <p className='text-[#EDE7E3] text-lg mr-48 sm:mr-72 whitespace-nowrap'>
                   The good stuff
                 </p>
               </div>
-              <div className='flex flex-nowrap items-center justify-center w-full'>
-                <h1 className='text-black text-6xl sm:text-7xl'>
-                  Projects<span className='text-white'>.</span>
+              <div
+                className='flex flex-nowrap items-center justify-center'
+                style={{
+                  background:
+                    'linear-gradient(to right, #CCFF00, #FFEA20 55%, #FF7A18)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                <h1 className='text-electric-lime text-6xl sm:text-7xl pb-2'>
+                  Projects<span className='text-[#E9E3E6]'>.</span>
                 </h1>
               </div>
             </div>
@@ -287,13 +309,15 @@ export default function Home() {
                               id='project-title'
                               className='absolute -top-6 inset-x-0 left-1/2 transform -translate-x-1/2 bg-purple rounded-full h-12 w-48 p-2 mb-1 text-center items-center justify-center flex'
                             >
-                              <h1>{project.Title}</h1>
+                              <h1 className='text-[#121212]'>
+                                {project.Title}
+                              </h1>
                             </div>
                             <div
                               id='link-buttons'
                               className='absolute bottom-0 right-0 flex flex-row justify-center items-center gap-2 m-2'
                             >
-                              <button className='rounded-full bg-gray w-12 h-9 active:bg-black active:text-white'>
+                              <button className='rounded-full bg-white w-12 h-9 hover:bg-electric-lime hover:text-[#121212]'>
                                 <a
                                   target='_blank'
                                   href={project.URL}
@@ -302,7 +326,7 @@ export default function Home() {
                                   Host
                                 </a>
                               </button>
-                              <button className='rounded-full bg-gray w-12 h-9 active:bg-black active:text-white'>
+                              <button className='rounded-full bg-white w-12 h-9 hover:bg-electric-lime hover:text-[#121212]'>
                                 <a
                                   target='_blank'
                                   href={project.Repo}
@@ -313,13 +337,13 @@ export default function Home() {
                               </button>
                             </div>
                           </div>
-                          <div id='body' className='bg-black-gray'>
+                          <div id='body' className='bg-[#404040]'>
                             <ul className='font-serif font-medium text-[#FAF9F6] text-center mx-4 py-4 leading-relaxed'>
                               {project.Objectives.map((item) => {
                                 return (
                                   <li
                                     key={uuidv4()}
-                                    className='odd:bg-[#5A6662] p-1 first:rounded-t-xl last:rounded-b-xl'
+                                    className=' p-1 first:rounded-t-xl last:rounded-b-xl'
                                   >
                                     {item}
                                   </li>
@@ -328,11 +352,14 @@ export default function Home() {
                             </ul>
                           </div>
                           <div id='footer' className='bg-gray rounded-b-xl'>
-                            <ul className='font-serif font-medium flex flex-row flex-wrap mx-3 py-3 justify-center gap-x-4'>
+                            <ul className='font-serif font-semibold flex flex-row flex-wrap mx-3 py-3 justify-center gap-x-4 text-[#FF5900] drop-shadow-sm'>
                               {project.Stack.map((tech) => {
                                 return (
-                                  <li key={uuidv4()}>
-                                    <span className='text-white'>#</span>
+                                  <li
+                                    key={uuidv4()}
+                                    className='hover:text-[#FF7A18]'
+                                  >
+                                    {/* <span className='text-[#FF7A18]'>#</span> */}
                                     {tech}
                                   </li>
                                 );
@@ -350,15 +377,23 @@ export default function Home() {
         </section>
         <section id='contact' className='mt-24 min-h-screen'>
           <div className='container mx-auto px-4 md:px-0 w-[380px] sm:w-[620px] md:w-[748px] lg:w-[1000px] xl:w-[1200px]'>
-            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-electric-lime pb-2'>
+            <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
               <div className=''>
-                <p className='text-gray text-lg ml-4 mr-48 sm:mr-72 whitespace-nowrap'>
+                <p className='text-[#EDE7E3] text-lg ml-4 mr-48 sm:mr-72 whitespace-nowrap'>
                   Reach out
                 </p>
               </div>
-              <div className=''>
-                <h1 className='text-black text-6xl sm:text-7xl'>
-                  Contact<span className='text-white'>.</span>
+              <div
+                className=''
+                style={{
+                  background:
+                    'linear-gradient(to right, #CCFF00, #FFEA20 55%, #FF7A18)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                <h1 className='text-[#000500] text-6xl sm:text-7xl'>
+                  Contact<span className='text-electric-lime'>.</span>
                 </h1>
               </div>
             </div>
