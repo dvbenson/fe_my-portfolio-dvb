@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+import Button from '../Button';
+import Link from 'next/link';
 
 export default function Footer({ styles }) {
   return (
@@ -9,28 +10,24 @@ export default function Footer({ styles }) {
         <ul className='flex flex-col justify-center text-center items-center mb-2'>
           <li className='p-2'>
             <div className='flex'>
-              <a
+              <Link
                 target='_blank'
                 href='https://github.com/dvbenson'
                 rel='noopener noreferrer'
               >
-                <button className={styles.button_circle}>
-                  <FontAwesomeIcon icon={faGithubAlt} className={styles.icon} />
-                </button>
-              </a>
+                <Button label={<FontAwesomeIcon icon={faGithubAlt} className={styles.icon} />} variant={'secondary'}/>
+              </Link>
 
-              <a
+              <Link
                 target='_blank'
-                href='https://www.linkedin.com/in/danielvictorbenson/'
+                href='https://www.linkedin.com/in/dvbenson/'
                 rel='noopener noreferrer'
               >
-                <button className={styles.button_circle}>
-                  <FontAwesomeIcon
+                <Button label={<FontAwesomeIcon
                     icon={faLinkedinIn}
                     className={styles.icon}
-                  />
-                </button>
-              </a>
+                  />} variant={'secondary'}/>
+              </Link>
             </div>
           </li>
           <li>

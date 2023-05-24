@@ -24,6 +24,10 @@ module.exports = {
       'white': '#FFFFFF',
       'purple': '#CAB8FF',
     },
+    boxShadow: {
+      'solid-primary':'0.125rem 0.125rem #cccccc, 1px 1px 5px rgba(0, 0, 0, 0.4)',
+      'solid-tertiary':'0.125rem 0.125rem #FFF, 1px 1px 5px rgba(0, 0, 0, 0.4)',
+    },
 
     extend: {},
   },
