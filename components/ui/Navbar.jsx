@@ -8,7 +8,7 @@ import {
   faXmark,
   faEllipsisVertical,
 } from '@fortawesome/free-solid-svg-icons';
-import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Navbar({ styles }) {
   const [menuOpen, setMenuOpen] = useState(false);

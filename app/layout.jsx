@@ -1,9 +1,13 @@
-import { Analytics } from '@vercel/analytics/react';
+// import { Analytics } from '@vercel/analytics/react';
 
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false;
 import '../styles/dist.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
+
+
+
 
 export default function RootLayout({ children }) {
   return (
@@ -16,7 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );

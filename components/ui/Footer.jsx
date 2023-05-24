@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Footer({ styles }) {
   return (
