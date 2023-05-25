@@ -21,7 +21,7 @@ export default function ImageFrame({
         fill={fill}
         sizes={sizes}
         priority={priority}
-        className={'aspect-square object-cover' + '' + variant}
+        className={variant}
       />
     </div>
   );

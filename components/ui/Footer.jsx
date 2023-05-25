@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function Footer({ styles }) {
   return (
-    <footer className='bg-[#222222] h-24 font-serif font-semibold text-[#E9E3E6]'>
-      <div className='container mx-auto px-4 h-full flex flex-col justify-end'>
+    <footer className='bg-[#222222] h-24 text-[#E9E3E6] min-w-screen'>
+      <div className='container mx-auto px-4 h-full flex flex-col justify-end w-full'>
         <ul className='flex flex-col justify-center text-center items-center mb-2'>
           <li className='p-2'>
             <div className='flex'>
@@ -31,10 +31,10 @@ export default function Footer({ styles }) {
             </div>
           </li>
           <li>
-            <p className='text-center text-sm'>danielvb@danielvb.dev</p>
+            <p className='text-center text-sm font-heading'>danielvb@danielvb.dev</p>
           </li>
           <li className=''>
-            <p className='text-center text-xs'>© 2023 All Rights Reserved</p>
+            <p className='text-center text-xs font-sans'>© 2023 All Rights Reserved</p>
           </li>
         </ul>
       </div>

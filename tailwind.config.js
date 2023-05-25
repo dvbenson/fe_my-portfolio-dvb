@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,8 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xxs: '320px',
+      xs: '375px', 
       sm: '480px',
       md: '768px',
       lg: '976px',
@@ -28,7 +32,10 @@ module.exports = {
       'solid-primary':'0.125rem 0.125rem #cccccc, 1px 1px 5px rgba(0, 0, 0, 0.4)',
       'solid-tertiary':'0.125rem 0.125rem #FFF, 1px 1px 5px rgba(0, 0, 0, 0.4)',
     },
-
+    fontFamily: {
+      sans: ['var(--font-dmsans)', ...fontFamily.sans],
+      heading: ['var(--font-heading)', ...fontFamily.sans],
+    },
     extend: {},
   },
   plugins: [],
