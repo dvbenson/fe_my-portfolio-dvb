@@ -1,29 +1,10 @@
 import ImageFrame from "../ImageFrame";
+import Header from "../Header";
 
 export default function About() {
   return (
     <>
-     <div className='mx-auto px-8 w-full'>
-        <div className='flex flex-col flex-nowrap items-center justify-center h-32 sm:h-42 bg-[#444545] pb-2'>
-          <div className='flex items-center justify-center'>
-            <p className='text-[#EDE7E3] xxs:text-sm sm:text-base xxs:mr-48 mr-64 sm:mr-72 font-heading'>It's all</p>
-          </div>
-          <div
-            className='flex items-center justify-center'
-            style={{
-              background:
-                'linear-gradient(to right, #CCFF00, #FFEA20 55%, #FF7A18)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            <h1 className='text-electric-lime xxs:text-5xl xs:text-6xl sm:text-7xl font-heading'>
-              About Me<span className='text-[#E9E3E6]'>.</span>
-            </h1>
-          </div>
-        </div>
-      </div>
-
+      <Header tag={`It's all`} title={'About Me'} />
       <section className=''>
         <div className='mx-auto px-4'>
           <div className='mx-auto px-4 w-full flex flex-col mt-16 gap-5 md:gap-24'>

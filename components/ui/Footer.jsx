@@ -3,7 +3,7 @@ import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Button from '../Button';
 import Link from 'next/link';
 
-export default function Footer({ styles }) {
+export default function Footer() {
   return (
     <footer className='bg-[#222222] h-24 text-[#E9E3E6] min-w-screen'>
       <div className='container mx-auto px-4 h-full flex flex-col justify-end w-full'>
@@ -15,7 +15,7 @@ export default function Footer({ styles }) {
                 href='https://github.com/dvbenson'
                 rel='noopener noreferrer'
               >
-                <Button label={<FontAwesomeIcon icon={faGithubAlt} className={styles.icon} />} variant={'secondary'}/>
+                <Button label={<FontAwesomeIcon icon={faGithubAlt}  />} variant={'secondary'}/>
               </Link>
 
               <Link
@@ -25,7 +25,7 @@ export default function Footer({ styles }) {
               >
                 <Button label={<FontAwesomeIcon
                     icon={faLinkedinIn}
-                    className={styles.icon}
+                    
                   />} variant={'secondary'}/>
               </Link>
             </div>

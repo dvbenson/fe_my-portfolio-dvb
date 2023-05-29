@@ -6,7 +6,7 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 
-export default function SideNavBar({ menuOpen, setMenuOpen, handleNav, styles}) {
+export default function SideNavBar({ menuOpen, setMenuOpen, handleNav}) {
   return (
     <div
     className={
@@ -27,12 +27,12 @@ export default function SideNavBar({ menuOpen, setMenuOpen, handleNav, styles}) 
             <NavItem label={<Button label={'Projects'} variant={'primary'}/>} href={'#projects'} className='py-4 cursor-pointer' onClick={() => setMenuOpen(false)} />
             <NavItem label={<Button label={'Contact'} variant={'primary'}/>} href={'#contact'} className='py-4 cursor-pointer' onClick={() => setMenuOpen(false)} />
             <NavItem 
-                label={<Button label={<FontAwesomeIcon icon={faGithubAlt} className={styles.icon}/>} variant={'secondary'}/>}  target='_blank'
+                label={<Button label={<FontAwesomeIcon icon={faGithubAlt}/>} variant={'secondary'}/>}  target='_blank'
                 href='https://github.com/dvbenson'
                 rel='noopener noreferrer'
                 className='py-4 cursor-pointer'
             />
-            <NavItem label={ <Button variant={'secondary'} label={ <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon}/>}/>} 
+            <NavItem label={ <Button variant={'secondary'} label={ <FontAwesomeIcon icon={faLinkedinIn}/>}/>} 
                 target='_blank'
                 href='https://www.linkedin.com/in/dvbenson/'
                 rel='noopener noreferrer'

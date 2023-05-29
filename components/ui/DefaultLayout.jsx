@@ -1,12 +1,12 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-export default function DefaultLayout({ children, styles }) {
+export default function DefaultLayout({ children }) {
   return (
       <>
-      <Navbar styles={styles} />
+      <Navbar/>
       {children}
-      <Footer styles={styles} />
+      <Footer/>
    </>
   );
 }

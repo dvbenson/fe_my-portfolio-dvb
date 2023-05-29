@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import ImageFrame from './ImageFrame';
 import Button from './Button';
 import Link from 'next/link';
-//'w-[300px] sm:w-[400px] h-[165px] sm:h-[220px] object-contain relative' 
+
 export default function ProjectCard({ project }) {
 return (
 

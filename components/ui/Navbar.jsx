@@ -11,7 +11,7 @@ import SideNavBar from './SideNavBar';
 import NavItem from '../NavItem';
 import Logo from '../Logo';
 
-export default function Navbar({ styles }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
@@ -37,16 +37,16 @@ export default function Navbar({ styles }) {
                   <FontAwesomeIcon
                     icon={faEllipsisVertical}
                     size='2xl'
-                    className={styles.divider}
+                    className='bg-[#121212]  text-[#121212] rounded-full my-1 mx-2.5'                    
                   />
                 </li>
             <NavItem 
-            label={<Button label={<FontAwesomeIcon icon={faGithubAlt} className={styles.icon}/>} variant={'secondary'}/>}  target='_blank'
+            label={<Button label={<FontAwesomeIcon icon={faGithubAlt} />} variant={'secondary'}/>}  target='_blank'
             href='https://github.com/dvbenson'
             rel='noopener noreferrer'
             className='p-4'
             />
-            <NavItem label={ <Button variant={'secondary'} label={ <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon}/>}/>} 
+            <NavItem label={ <Button variant={'secondary'} label={ <FontAwesomeIcon icon={faLinkedinIn} />}/>} 
             target='_blank'
             href='https://www.linkedin.com/in/dvbenson/'
             rel='noopener noreferrer'
@@ -62,7 +62,7 @@ export default function Navbar({ styles }) {
             />
           </div>
         </div>
-        <SideNavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} handleNav={handleNav} styles={styles}/>
+        <SideNavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} handleNav={handleNav} />
       </nav>
     </>
   );
