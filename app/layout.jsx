@@ -1,4 +1,4 @@
-// import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
 import { DM_Serif_Display, DM_Sans} from 'next/font/google';
 import '../styles/dist.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={dm_serif_display.variable + " " + dm_sans.variable}>
         {children}
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
     </html>
   );
