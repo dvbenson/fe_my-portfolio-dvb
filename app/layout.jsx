@@ -19,11 +19,28 @@ const dm_sans = DM_Sans({
   weight: ['400', '500', '700'],
 });
 
+export const metadata = {
+  title: 'danielvb.dev',
+  description: 'Daniel VB: portfolio website, full stack web development',
+  keywords: ['Next.js', 'React', 'Tailwind CSS', 'Front End Development', 'Full Stack Development', 'Web Development', 'Web Design', 'UK'],
+  authors: [
+    {
+    name: 'Daniel Benson',
+    url: 'https://danielvb.dev',
+    },
+  ],
+  creator: 'Daniel Benson',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+  },
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-      <title>DANIELVB.DEV</title>
       </head>
       <body className={dm_serif_display.variable + " " + dm_sans.variable}>
         {children}

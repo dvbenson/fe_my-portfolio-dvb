@@ -30,21 +30,14 @@ export default function About() {
                 <p className='text-[#E9E3E6] font-serif text-base md:text-lg  xl:text-xl font-sans'>
                   Co-dependant on my white board and post-it notes long
                   before the coding bug bit. Building things has always been
-                  my go-to, a golden thread of sorts, one that has clicked
-                  into place since I first opened up my terminal.
-                </p>
-                <p className='text-[#E9E3E6] font-sans text-base md:text-lg  xl:text-xl'>
-                  My teenage years were a lot of playing World of Warcraft
-                  whilst making snazzy forum signatures. Before then and
-                  onwards, I’m a creative person - drawing, illustrating,
-                  doodling for endless hours.
+                  how I learn best, a golden thread in life. 
                 </p>
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  That curiosity to create and need to make also fuels my
-                  love to learn, leading me to travel and learn languages. I
-                  love to cook and bake. I keep on top of my fitness to
-                  combat cookie consumption and I’m generally tinkering or
-                  fiddling with something.
+                  I fell into learning and studying modern foreign languages, which satiated a need and curiosity to understand the world around me. 
+                  Travelling and living abroad was a way to experience the world and learn how things work outside of my sphere of understanding.
+                </p>
+                <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
+                When not in front of a screen, I can be found in the kitchen, baking or cooking, or keeping on-top of my fitness to combat cookie consumption. Generally tinkering or fiddling with something. Have been known to make hot sauce.
                 </p>
               </div>
             </div>
@@ -67,24 +60,22 @@ export default function About() {
                 <h2 className='text-purple text-3xl lg:text-4xl xl:text-5xl font-heading'>
                   Experience.
                 </h2>
-
+                <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl '>
+                  Over a decade of professional experience in:
+                </p>
+                <ul className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl list-none'>
+                  <li> ✅  Project Management</li>
+                  <li> ✅  Product Management</li>
+                  <li> ✅  Business Development</li>
+                  <li> ✅  User-centred Service</li>
+                  <li> ✅  Team and Line Management</li>
+                </ul>
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  As a career-changer and a recent Northcoder bootcamp
-                  graduate, my journey to become a web developer has taken a
-                  route consisting of self-taught fundamentals, almost 500
-                  coding hours over 13 weeks and countless days and nights
-                  of self-learning.
+                My skills and experience have been honed in the fast-paced, ever-changing world of service and product development.
+                This has given me a unique perspective on how to approach problems and find solutions. 
                 </p>
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  Over a decade of professional experience has led me from
-                  civil engineering, to education and a few trips into
-                  user-centred service.
-                </p>
-                <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  Fortunately, across that time I’ve garnered a toolset that
-                  has positioned me uniquely into the flows of understanding
-                  Agile methodologies, having worked in industries that
-                  follow similar iterative approaches.
+                I can position myself in the shoes of the user, the business and the team to design and build products that are viable, feasible and desirable.
                 </p>
               </div>
             </div>
@@ -109,28 +100,20 @@ export default function About() {
                 </h2>
 
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  My training in PERN has equipped me with the knowledge of
-                  full stack development and the ability, confidence and
-                  motivation to work alone, creating effective, viable
-                  products with the latest technologies.
+                  My training in PERN has equipped me the experience to created effective, viable
+                  products with the latest technologies. I am able to take a product through its entire lifecycle.
                 </p>
+                
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  I am able to take a product through its entire lifecycle.
-                  Whether that's confidently building a backend REST API in
-                  Node, routing with Express or creating frontend components
-                  in React or Next.js.
-                </p>
-                <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
-                  I have particular interest in UI/UX design, building solid
-                  knowledge in design practices and prototyping using Figma
-                  and Framer, and styling with vanilla CSS or Tailwind to
+                  I have particular interest in UI/UX design and frontend development, building solid
+                  knowledge in design practices and prototyping using Figma, and styling with vanilla CSS or Tailwind to
                   develop mobile-first, accessible and responsive products.
                 </p>
                 <p className='text-[#E9E3E6] font-sans  text-base md:text-lg  xl:text-xl'>
                   This is all fuel in the engine as I follow my trajectory
                   into web development, being open and actively pursuing
                   roles that are full stack or front end in the react
-                  universe.
+                  ecosystem.
                 </p>
               </div>
             </div>
@@ -145,7 +128,7 @@ export default function About() {
                   height={400}
                   width={550}
                   priority={true}
-                  className='sm:min-w-[350px] sm:h-[200px] grid grid-cols-1 place-items-center'
+                  className='sm:min-w-[350px] sm:max-w-[350px] sm:h-[200px] grid grid-cols-1 place-items-center'
                   variant=''
                 />
               </div>
@@ -160,7 +143,7 @@ export default function About() {
                   <li> Node.js, Express.js</li>
                   <li> Postgres, SQL</li>
                   <li> Tailwind, Bootstrap</li>
-                  <li> Figma, Framer</li>
+                  <li> Figma</li>
                 </ul>
               </div>
             </div>
