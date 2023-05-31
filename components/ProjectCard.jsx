@@ -44,7 +44,7 @@ return (
   </div>
 </div>
 <div className='bg-[#404040] xxs:h-[288px] xs:h-[258px] sm:h-[208px] text-left p-4 leading-relaxed font-serif font-medium text-[#FAF9F6] font-sans'>
-    <p className=''>{project.objectives}</p>
+    <p className=''>{project.description}</p>
 </div>
 <div id='footer' className='bg-gray rounded-b-xl min-h-[60px] flex justify-evenly'>
   <ul className='font-sans font-semibold flex flex-row flex-wrap p-2 justify-center items-center gap-x-4 text-electric-lime drop-shadow-sm'>
